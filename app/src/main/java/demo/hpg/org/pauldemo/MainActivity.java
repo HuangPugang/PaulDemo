@@ -1,19 +1,33 @@
 package demo.hpg.org.pauldemo;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+
+import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
 
 
-public class MainActivity extends ActionBarActivity {
+/**
+ * 主程序入口
+ */
+public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+    private Button lightControlButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        initView();
     }
 
+    private void initView() {
+        lightControlButton = (Button) findViewById(R.id.light_control);
+        lightControlButton.setOnClickListener(this);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -35,5 +49,16 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        Intent intent = new Intent();
+        switch (v.getId()) {
+            case R.id.light_control:
+                intent.setClass(this, LightControlActivity.class);
+                break;
+        }
+        startActivity(intent);
     }
 }
