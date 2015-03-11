@@ -57,8 +57,14 @@
             android:name=".sugarorm.SugarActivity"
             android:label="@string/app_name">
         </activity>
-
-
+        <activity
+            android:name=".moveview.MoveViewActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".swiperefresh.SwipeRefreshActivity"
+            android:label="@string/app_name">
+        </activity>
 
 
 

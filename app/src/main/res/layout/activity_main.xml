@@ -37,4 +37,16 @@
         android:text="sugar orm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/myscrollview"
+        android:text="自定义scrooview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/swiperefresh"
+        android:text="swiperefresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>
