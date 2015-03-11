@@ -1,8 +1,8 @@
 package demo.hpg.org.utils;
 
 import android.content.Context;
+import android.util.Log;
 
-import com.eastmoney.android.util.log.Log;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;
@@ -90,7 +90,7 @@ public class IOUtil {
 			is = context.getAssets().open(fileName);
 			return inputStreamToString(is, encoding);
 		} catch (Exception e) {
-			Log.e(TAG,e.getMessage(),e);
+			Log.e(TAG, e.getMessage(), e);
 			return "";
 		} finally {
 			try {
