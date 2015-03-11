@@ -11,6 +11,7 @@ import android.widget.Button;
 import demo.hpg.org.pauldemo.getphoto.GetPhotoActivity;
 import demo.hpg.org.pauldemo.getuipush.GetuiPushActivity;
 import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
+import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.volley.VolleyActivity;
 
 
@@ -18,12 +19,16 @@ import demo.hpg.org.pauldemo.volley.VolleyActivity;
  * 主程序入口
  */
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+
     private Button lightControlButton;//亮度调节
+
     private Button getPhotoButton;//获取图片
 
     private Button volleyButton;//volley网络请求
 
     private Button getuiButton; //个推推送
+
+    private Button sugarButton;// sugar orm
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,30 +50,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         getuiButton = (Button) findViewById(R.id.getui);
         getuiButton.setOnClickListener(this);
+
+        sugarButton = (Button) findViewById(R.id.sugar);
+        sugarButton.setOnClickListener(this);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
@@ -84,6 +69,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.getui:
                 intent.setClass(this, GetuiPushActivity.class);
+                break;
+            case R.id.sugar:
+                intent.setClass(this, SugarActivity.class);
+                break;
 
         }
         startActivity(intent);

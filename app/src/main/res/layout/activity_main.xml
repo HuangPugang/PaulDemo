@@ -31,4 +31,10 @@
         android:text="个推消息推送"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/sugar"
+        android:text="sugar orm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

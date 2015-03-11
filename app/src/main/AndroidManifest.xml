@@ -52,6 +52,18 @@
             android:name=".volley.VolleyActivity"
             android:label="@string/app_name">
         </activity>
+        <!--sugarOrm-->
+        <activity
+            android:name=".sugarorm.SugarActivity"
+            android:label="@string/app_name">
+        </activity>
+
+
+
+
+
+
+
 
         <!--个推-->
         <activity
@@ -146,6 +158,14 @@
             android:name="com.igexin.download.DownloadProvider"
             android:process=":pushservice"
             android:authorities="downloads.demo.hpg.org.pauldemo"/>
+        <!--个推配置结束-->
+
+
+        <!--sugar orm配置-->
+        <meta-data android:name="DATABASE" android:value="sugar_test.db" />
+        <meta-data android:name="VERSION" android:value="1" />
+        <meta-data android:name="QUERY_LOG" android:value="true" />
+        <meta-data android:name="DOMAIN_PACKAGE_NAME" android:value="demo.hpg.org.pauldemo" />
     </application>
 
 </manifest>
