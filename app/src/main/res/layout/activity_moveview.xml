@@ -9,6 +9,16 @@
         android:text="清除"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/save"
+        android:text="保存"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp" />
+
 
     <demo.hpg.org.pauldemo.moveview.DrawBoardView
         android:id="@+id/boardview"
