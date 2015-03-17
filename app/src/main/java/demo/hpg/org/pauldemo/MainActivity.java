@@ -1,13 +1,16 @@
 package demo.hpg.org.pauldemo;
 
 import android.content.Intent;
+import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import demo.hpg.org.pauldemo.circleindicator.ViewpagerIndicatorActivity;
 import demo.hpg.org.pauldemo.getphoto.GetPhotoActivity;
 import demo.hpg.org.pauldemo.getuipush.GetuiPushActivity;
+import demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity;
 import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
@@ -33,6 +36,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button myscrollButton;// 自定义scrollview
 
     private Button swiperefreshButton;//swiperefresh
+
+    private Button indicatorButton ;//指示器
+
+    private Button imgCompressButton;//图片压缩
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,6 +69,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         swiperefreshButton = (Button) findViewById(R.id.swiperefresh);
         swiperefreshButton.setOnClickListener(this);
+
+        indicatorButton = (Button) findViewById(R.id.indicator_);
+        indicatorButton.setOnClickListener(this);
+
+        imgCompressButton= (Button) findViewById(R.id.image_compress);
+        imgCompressButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -89,6 +102,13 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 intent.setClass(this, SwipeRefreshActivity.class);
                 break;
 
+            case R.id.indicator_:
+                intent.setClass(this, ViewpagerIndicatorActivity.class);
+                break;
+
+            case R.id.image_compress:
+                intent.setClass(this, ImageCompressActivity.class);
+                break;
         }
         startActivity(intent);
     }

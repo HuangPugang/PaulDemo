@@ -65,8 +65,14 @@
             android:name=".swiperefresh.SwipeRefreshActivity"
             android:label="@string/app_name">
         </activity>
-
-
+        <activity
+            android:name=".circleindicator.ViewpagerIndicatorActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".imagecompress.ImageCompressActivity"
+            android:label="@string/app_name">
+        </activity>
 
 
 

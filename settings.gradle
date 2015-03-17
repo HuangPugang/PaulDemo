@@ -1,1 +1,1 @@
-include ':app', ':sugar', ':utils'
+include ':app', ':sugar', ':utils', ':circleindicator'

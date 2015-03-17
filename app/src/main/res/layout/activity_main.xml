@@ -49,4 +49,16 @@
         android:text="swiperefresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/indicator_"
+        android:text="indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="图片压缩"
+        android:id="@+id/image_compress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 </LinearLayout>

@@ -140,8 +140,8 @@ public class GetPhotoActivity extends Activity {
         intent.putExtra("crop", "true");
         intent.putExtra("aspectX", 1);
         intent.putExtra("aspectY", 1);
-        intent.putExtra("outputX", 90);
-        intent.putExtra("outputY", 90);
+        intent.putExtra("outputX", 300);
+        intent.putExtra("outputY", 300);
         intent.putExtra("return-data", true);
         startActivityForResult(intent, CROP_IMAGE);
     }
