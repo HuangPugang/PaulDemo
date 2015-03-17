@@ -145,7 +145,7 @@ public class ViewpagerIndicatorActivity extends ActionBarActivity {
         @Override
         public void handleMessage(Message msg) {
             super.handleMessage(msg);
-            defaultViewpager.setCurrentItem(currentItem);
+            defaultViewpager.setCurrentItem((defaultViewpager.getCurrentItem()+1)%5);
             defaultIndicator.setViewPager(defaultViewpager);
 
 //            customViewpager.setCurrentItem(currentItem);
