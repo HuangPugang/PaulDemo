@@ -7,7 +7,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.io.File;
+
+import demo.hpg.org.pauldemo.anim.AnimationActivity;
 import demo.hpg.org.pauldemo.circleindicator.ViewpagerIndicatorActivity;
+import demo.hpg.org.pauldemo.file.FileActivity;
 import demo.hpg.org.pauldemo.getphoto.GetPhotoActivity;
 import demo.hpg.org.pauldemo.getuipush.GetuiPushActivity;
 import demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity;
@@ -16,6 +20,8 @@ import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity;
 import demo.hpg.org.pauldemo.volley.VolleyActivity;
+import demo.hpg.org.pauldemo.wifimanager.WifiApActivity;
+import demo.hpg.org.pauldemo.wifimanager.WifiManagerActivity;
 
 
 /**
@@ -40,6 +46,14 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button indicatorButton ;//指示器
 
     private Button imgCompressButton;//图片压缩
+
+    private Button wifiButton;//wifi
+
+    private Button wifiApButton;//wifi 热点
+
+    private Button socketButton;//socket
+
+    private Button animButton;//anim动画
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -75,6 +89,18 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         imgCompressButton= (Button) findViewById(R.id.image_compress);
         imgCompressButton.setOnClickListener(this);
+
+        wifiButton  = (Button) findViewById(R.id.wifi);
+        wifiButton.setOnClickListener(this);
+
+        wifiApButton = (Button) findViewById(R.id.wifi_ap);
+        wifiApButton.setOnClickListener(this);
+
+        socketButton = (Button) findViewById(R.id.socket);
+        socketButton.setOnClickListener(this);
+
+        animButton = (Button) findViewById(R.id.anim);
+        animButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -109,7 +135,22 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.image_compress:
                 intent.setClass(this, ImageCompressActivity.class);
                 break;
+
+            case R.id.wifi:
+                intent.setClass(this, WifiManagerActivity.class);
+                break;
+
+            case R.id.wifi_ap:
+                intent.setClass(this, WifiApActivity.class);
+                break;
+            case R.id.socket:
+                intent.setClass(this, FileActivity.class);
+                break;
+            case R.id.anim:
+                intent.setClass(this, AnimationActivity.class);
+                break;
         }
         startActivity(intent);
+        overridePendingTransition(R.anim.bottom_in,R.anim.hold);
     }
 }

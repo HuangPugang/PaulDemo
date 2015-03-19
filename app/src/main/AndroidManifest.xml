@@ -73,8 +73,23 @@
             android:name=".imagecompress.ImageCompressActivity"
             android:label="@string/app_name">
         </activity>
-
-
+        <activity
+            android:name=".wifimanager.WifiManagerActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".wifimanager.WifiApActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".file.FileActivity"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name=".anim.AnimationActivity"
+            android:label="@string/app_name"
+            android:theme="@style/BottomInTheme">
+        </activity>
 
 
         <!--个推-->
