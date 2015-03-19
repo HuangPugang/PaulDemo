@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.AnimationSet;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
 /**
@@ -63,6 +64,26 @@ public class AnimationUtil {
         //将alphaAnimation对象添加到AnimationSet当中
         animationSet.addAnimation(alphaAnimation);
         //使用ImageView的startAnimation方法执行动画
+        view.startAnimation(animationSet);
+    }
+
+
+    public static void TopIn(View view){
+        AnimationSet animationSet = new AnimationSet(true);
+        TranslateAnimation translateAnimation;
+        translateAnimation= new TranslateAnimation(0,0,-view.getHeight(),0);
+        translateAnimation.setDuration(500);
+        animationSet.addAnimation(translateAnimation);
+        view.startAnimation(animationSet);
+
+    }
+
+    public static void TopOut(View view){
+        AnimationSet animationSet = new AnimationSet(true);
+        TranslateAnimation translateAnimation;
+        translateAnimation= new TranslateAnimation(0,0,0,-view.getHeight());
+        translateAnimation.setDuration(500);
+        animationSet.addAnimation(translateAnimation);
         view.startAnimation(animationSet);
     }
 }

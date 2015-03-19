@@ -7,7 +7,6 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -46,7 +45,7 @@ public class WifiManagerActivity extends Activity {
     public void init(){
         allNetWork = (TextView) findViewById(R.id.allNetWork);
         scan = (Button) findViewById(R.id.scan);
-        start = (Button) findViewById(R.id.start);
+        start = (Button) findViewById(R.id.change);
         stop = (Button) findViewById(R.id.stop);
         check = (Button) findViewById(R.id.check);
         getIp = (Button) findViewById(R.id.get_ip);
@@ -70,7 +69,7 @@ public class WifiManagerActivity extends Activity {
                     listView.setAdapter(new ArrayAdapter<String>(WifiManagerActivity.this,
                             android.R.layout.simple_list_item_1, wifiArr));
                     break;
-                case R.id.start://打开Wifi
+                case R.id.change://打开Wifi
                     managers.openWifi();
                     Toast.makeText(WifiManagerActivity.this, "当前wifi状态为：" + managers.checkState(), Toast.LENGTH_SHORT).show();
                     break;
