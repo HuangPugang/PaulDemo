@@ -54,6 +54,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button socketButton;//socket
 
     private Button animButton;//anim动画
+
+    private Button uploadButton; //上传文件
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,6 +103,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         animButton = (Button) findViewById(R.id.anim);
         animButton.setOnClickListener(this);
+
+        uploadButton = (Button) findViewById(R.id.upload);
+        uploadButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
