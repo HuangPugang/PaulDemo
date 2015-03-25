@@ -19,6 +19,7 @@ import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity;
+import demo.hpg.org.pauldemo.upload.UploadActivity;
 import demo.hpg.org.pauldemo.volley.VolleyActivity;
 import demo.hpg.org.pauldemo.wifimanager.WifiApActivity;
 import demo.hpg.org.pauldemo.wifimanager.WifiManagerActivity;
@@ -153,6 +154,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.anim:
                 intent.setClass(this, AnimationActivity.class);
+                break;
+            case R.id.upload:
+                intent.setClass(this, UploadActivity.class);
                 break;
         }
         startActivity(intent);
