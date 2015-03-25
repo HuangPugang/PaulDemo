@@ -19,6 +19,7 @@ import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity;
+import demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity;
 import demo.hpg.org.pauldemo.upload.UploadActivity;
 import demo.hpg.org.pauldemo.volley.VolleyActivity;
 import demo.hpg.org.pauldemo.wifimanager.WifiApActivity;
@@ -57,6 +58,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button animButton;//anim动画
 
     private Button uploadButton; //上传文件
+
+    private Button elasticButton;//弹性scrollview
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -107,6 +110,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         uploadButton = (Button) findViewById(R.id.upload);
         uploadButton.setOnClickListener(this);
+
+        elasticButton = (Button) findViewById(R.id.elastic);
+        elasticButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -133,19 +139,15 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.swiperefresh:
                 intent.setClass(this, SwipeRefreshActivity.class);
                 break;
-
             case R.id.indicator_:
                 intent.setClass(this, ViewpagerIndicatorActivity.class);
                 break;
-
             case R.id.image_compress:
                 intent.setClass(this, ImageCompressActivity.class);
                 break;
-
             case R.id.wifi:
                 intent.setClass(this, WifiManagerActivity.class);
                 break;
-
             case R.id.wifi_ap:
                 intent.setClass(this, WifiApActivity.class);
                 break;
@@ -157,6 +159,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.upload:
                 intent.setClass(this, UploadActivity.class);
+                break;
+            case R.id.elastic:
+                intent.setClass(this, ElasticScrollViewActivity.class);
                 break;
         }
         startActivity(intent);

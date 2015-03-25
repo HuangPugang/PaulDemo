@@ -13,11 +13,9 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 import demo.hpg.org.pauldemo.R;
-import demo.hpg.org.utils.AnimationUtil;
 
 /**
  * Author huarizhong
@@ -26,7 +24,7 @@ import demo.hpg.org.utils.AnimationUtil;
  */
 public class AnimationActivity extends Activity {
     private Button changeBG;
-    private RelativeLayout linearLayout ;
+    private RelativeLayout relativeLayout;
     private Button showTips;
     private LayoutInflater inflater ;
     @Override
@@ -36,14 +34,14 @@ public class AnimationActivity extends Activity {
         inflater = LayoutInflater.from(this);
         changeBG = (Button) findViewById(R.id.change);
         showTips = (Button) findViewById(R.id.show_tip);
-        linearLayout = (RelativeLayout) findViewById(R.id.layout);
+        relativeLayout = (RelativeLayout) findViewById(R.id.layout);
 
 
         changeBG.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AnimationView animationView = new AnimationView(AnimationActivity.this);
-                linearLayout.addView(animationView);
+                relativeLayout.addView(animationView);
             }
         });
 
@@ -88,7 +86,7 @@ public class AnimationActivity extends Activity {
         final View tipView  = inflater.inflate(R.layout.tip,null);
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
-        linearLayout.addView(tipView, params);
+        relativeLayout.addView(tipView, params);
         final Animation aniin = new AnimationUtils().loadAnimation(this,
                 R.anim.tip_push_in);
         final Animation aniout = new AnimationUtils().loadAnimation(this,
@@ -124,7 +122,7 @@ public class AnimationActivity extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                linearLayout.removeView(tipView);
+                relativeLayout.removeView(tipView);
             }
         });
     }
