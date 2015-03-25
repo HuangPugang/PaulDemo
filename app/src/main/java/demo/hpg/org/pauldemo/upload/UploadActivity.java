@@ -18,6 +18,7 @@ import demo.hpg.org.pauldemo.R;
 public class UploadActivity extends Activity {
     private Button button;
     public static final String PATH = android.os.Environment.getExternalStorageDirectory()+"/DCIM/test.jpg";
+//    public static final String REQUEST_URL="http://172.16.40.48:8080/MyServe/servlet/GetNewsList";
     public static final String REQUEST_URL="http://172.16.40.48:8080/MyServe/servlet/GetNewsList";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +31,7 @@ public class UploadActivity extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            new Thread(new UploadService(file)).start();
+            new Thread(new NetWork()).start();
             }
         });
     }
