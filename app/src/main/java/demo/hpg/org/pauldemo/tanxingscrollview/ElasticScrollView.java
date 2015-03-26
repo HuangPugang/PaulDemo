@@ -86,8 +86,9 @@ public class ElasticScrollView extends ScrollView {
                             // 保存正常的布局位置
                             normal.set(mFirstChild.getLeft(), mFirstChild.getTop(), mFirstChild.getRight(), mFirstChild.getBottom());
                         }
-                        // 移动布局
+                        // 移动布局(关键)
                         mFirstChild.layout(mFirstChild.getLeft(), mFirstChild.getTop() - deltaY / 2, mFirstChild.getRight(), mFirstChild.getBottom() - deltaY / 2);
+//                        mFirstChild.scrollBy(0,deltaY);
                     } else {
                         super.onTouchEvent(ev);
                     }

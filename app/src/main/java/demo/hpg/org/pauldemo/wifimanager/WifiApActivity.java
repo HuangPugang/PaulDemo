@@ -11,6 +11,13 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 
+import org.apache.http.conn.util.InetAddressUtils;
+
+import java.net.InetAddress;
+import java.net.NetworkInterface;
+import java.net.SocketException;
+import java.util.Enumeration;
+
 import demo.hpg.org.pauldemo.R;
 
 /**
@@ -29,14 +36,15 @@ public class WifiApActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         mContext = this;
 
         setContentView(R.layout.activity_wifi_ap);
 
         mBtn1 = (Button)findViewById(R.id.button1);
         mBtn2 = (Button)findViewById(R.id.button2);
+
         mBtn1.setText("点击连接Wifi");
+        mBtn1.setText(getLocalHostIp());
         mBtn2.setText("点击创建Wifi热点");
         mBtn1.setOnClickListener(new Button.OnClickListener() {
 
@@ -107,4 +115,32 @@ public class WifiApActivity extends Activity {
         Log.d("Rssi", "Unregistered");
     }
 
+
+    public static String getLocalHostIp() {
+        String ipaddress = "";
+        try {
+            Enumeration<NetworkInterface> en = NetworkInterface
+                    .getNetworkInterfaces();
+            // 遍历所用的网络接口
+            while (en.hasMoreElements()) {
+                NetworkInterface nif = en.nextElement();// 得到每一个网络接口绑定的所有ip
+                Enumeration<InetAddress> inet = nif.getInetAddresses();
+                // 遍历每一个接口绑定的所有ip
+                while (inet.hasMoreElements()) {
+                    InetAddress ip = inet.nextElement();
+                    if (!ip.isLoopbackAddress()
+                            && InetAddressUtils.isIPv4Address(ip
+                            .getHostAddress())) {
+                        return ipaddress = ip.getHostAddress();
+                    }
+                }
+
+            }
+        } catch (SocketException e) {
+            System.out.print("获取IP失败");
+            e.printStackTrace();
+        }
+        return ipaddress;
+
+    }
 }

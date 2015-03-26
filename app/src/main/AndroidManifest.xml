@@ -15,6 +15,7 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="getui.permission.GetuiService.demo.hpg.org.pauldemo" />
     <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
     <!--自定义权限-->
     <permission
         android:name="getui.permission.GetuiService.demo.hpg.org.pauldemo"
@@ -79,13 +80,25 @@
             android:theme="@style/BottomInTheme"></activity>
         <activity
             android:name=".upload.UploadActivity"
-            android:label="@string/app_name">
-
-            </activity>
+            android:label="@string/app_name"></activity>
         <activity
             android:name=".tanxingscrollview.ElasticScrollViewActivity"
             android:label="@string/app_name"></activity>
-
+        <activity
+            android:name=".slidingfinish.SlidingActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".slidingfinish.AbsActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".slidingfinish.NormalActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".slidingfinish.ScrollActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".slidingfinish.ViewPagerActivity"
+            android:label="@string/app_name"></activity>
 
         <!--个推-->
         <activity

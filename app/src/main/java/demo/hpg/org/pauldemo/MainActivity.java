@@ -17,6 +17,7 @@ import demo.hpg.org.pauldemo.getuipush.GetuiPushActivity;
 import demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity;
 import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
+import demo.hpg.org.pauldemo.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity;
 import demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity;
@@ -60,6 +61,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button uploadButton; //上传文件
 
     private Button elasticButton;//弹性scrollview
+
+    private Button slidingFinishButton;//滑动关闭
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -113,6 +116,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         elasticButton = (Button) findViewById(R.id.elastic);
         elasticButton.setOnClickListener(this);
+
+        slidingFinishButton = (Button) findViewById(R.id.slidingfinish);
+        slidingFinishButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -162,6 +168,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.elastic:
                 intent.setClass(this, ElasticScrollViewActivity.class);
+                break;
+            case R.id.slidingfinish:
+                intent.setClass(this, SlidingActivity.class);
                 break;
         }
         startActivity(intent);
