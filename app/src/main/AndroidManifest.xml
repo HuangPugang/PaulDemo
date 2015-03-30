@@ -99,7 +99,9 @@
         <activity
             android:name=".slidingfinish.ViewPagerActivity"
             android:label="@string/app_name"></activity>
-
+        <activity
+            android:name=".js.JSActivity"
+            android:label="@string/app_name"></activity>
         <!--个推-->
         <activity
             android:name=".getuipush.GetuiPushActivity"

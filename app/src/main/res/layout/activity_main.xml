@@ -105,5 +105,10 @@
             android:id="@+id/slidingfinish"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Button
+            android:text="js调用"
+            android:id="@+id/js"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>

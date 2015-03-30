@@ -15,6 +15,7 @@ import demo.hpg.org.pauldemo.file.FileActivity;
 import demo.hpg.org.pauldemo.getphoto.GetPhotoActivity;
 import demo.hpg.org.pauldemo.getuipush.GetuiPushActivity;
 import demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity;
+import demo.hpg.org.pauldemo.js.JSActivity;
 import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.slidingfinish.SlidingActivity;
@@ -63,6 +64,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button elasticButton;//弹性scrollview
 
     private Button slidingFinishButton;//滑动关闭
+
+    private Button jsButton;//js调用
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -119,6 +122,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         slidingFinishButton = (Button) findViewById(R.id.slidingfinish);
         slidingFinishButton.setOnClickListener(this);
+
+        jsButton = (Button) findViewById(R.id.js);
+        jsButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -171,6 +177,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
             case R.id.slidingfinish:
                 intent.setClass(this, SlidingActivity.class);
+                break;
+            case R.id.js:
+                intent.setClass(this, JSActivity.class);
                 break;
         }
         startActivity(intent);
