@@ -79,6 +79,9 @@
             android:label="@string/app_name"
             android:theme="@style/BottomInTheme"></activity>
         <activity
+            android:name=".webview.MyWebview"
+            android:label="@string/app_name"></activity>
+        <activity
             android:name=".upload.UploadActivity"
             android:label="@string/app_name"></activity>
         <activity

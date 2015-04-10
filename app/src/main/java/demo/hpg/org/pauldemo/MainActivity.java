@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import demo.hpg.org.pauldemo.getmessage.MessageActivity;
 import java.io.File;
 
 import demo.hpg.org.pauldemo.anim.AnimationActivity;
@@ -24,6 +25,7 @@ import demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity;
 import demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity;
 import demo.hpg.org.pauldemo.upload.UploadActivity;
 import demo.hpg.org.pauldemo.volley.VolleyActivity;
+import demo.hpg.org.pauldemo.webview.MyWebview;
 import demo.hpg.org.pauldemo.wifimanager.WifiApActivity;
 import demo.hpg.org.pauldemo.wifimanager.WifiManagerActivity;
 
@@ -47,6 +49,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
     private Button swiperefreshButton;//swiperefresh
 
+    private Button sendBroadcastButton;//发送广播
+
     private Button indicatorButton ;//指示器
 
     private Button imgCompressButton;//图片压缩
@@ -58,6 +62,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button socketButton;//socket
 
     private Button animButton;//anim动画
+
+    private Button webButton;//webview
 
     private Button uploadButton; //上传文件
 
@@ -96,6 +102,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
         swiperefreshButton = (Button) findViewById(R.id.swiperefresh);
         swiperefreshButton.setOnClickListener(this);
 
+        sendBroadcastButton = (Button) findViewById(R.id.sendBroadcast);
+        sendBroadcastButton.setOnClickListener(this);
+
         indicatorButton = (Button) findViewById(R.id.indicator_);
         indicatorButton.setOnClickListener(this);
 
@@ -113,6 +122,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         animButton = (Button) findViewById(R.id.anim);
         animButton.setOnClickListener(this);
+
+        webButton = (Button) findViewById(R.id.webview);
+        webButton.setOnClickListener(this);
 
         uploadButton = (Button) findViewById(R.id.upload);
         uploadButton.setOnClickListener(this);
@@ -151,15 +163,22 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.swiperefresh:
                 intent.setClass(this, SwipeRefreshActivity.class);
                 break;
+            case R.id.sendBroadcast:
+                intent.setClass(this, MessageActivity.class);
+                break;
+
             case R.id.indicator_:
                 intent.setClass(this, ViewpagerIndicatorActivity.class);
                 break;
+
             case R.id.image_compress:
                 intent.setClass(this, ImageCompressActivity.class);
                 break;
+
             case R.id.wifi:
                 intent.setClass(this, WifiManagerActivity.class);
                 break;
+
             case R.id.wifi_ap:
                 intent.setClass(this, WifiApActivity.class);
                 break;
@@ -181,8 +200,12 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.js:
                 intent.setClass(this, JSActivity.class);
                 break;
+
+            case R.id.webview:
+                intent.setClass(this, MyWebview.class);
+                break;
         }
         startActivity(intent);
-        overridePendingTransition(R.anim.bottom_in,R.anim.hold);
+        overridePendingTransition(R.anim.bottom_in, R.anim.hold);
     }
 }

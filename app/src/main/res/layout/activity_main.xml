@@ -55,6 +55,12 @@
         android:layout_height="wrap_content" />
 
     <Button
+        android:id="@+id/sendBroadcast"
+        android:text="发送广播"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />Ò
+
+    <Button
         android:id="@+id/indicator_"
         android:text="indicator"
         android:layout_width="wrap_content"
@@ -87,6 +93,11 @@
         <Button
             android:text="Activity动画"
             android:id="@+id/anim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="webview"
+            android:id="@+id/webview"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
