@@ -26,7 +26,7 @@ import demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity;
 import demo.hpg.org.pauldemo.upload.UploadActivity;
 import demo.hpg.org.pauldemo.volley.VolleyActivity;
 import demo.hpg.org.pauldemo.webview.MyWebview;
-import demo.hpg.org.pauldemo.wifimanager.WifiApActivity;
+//import demo.hpg.org.pauldemo.wifimanager.WifiApActivity;
 import demo.hpg.org.pauldemo.wifimanager.WifiManagerActivity;
 
 
@@ -180,7 +180,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 break;
 
             case R.id.wifi_ap:
-                intent.setClass(this, WifiApActivity.class);
+//                intent.setClass(this, WifiApActivity.class);
                 break;
             case R.id.socket:
                 intent.setClass(this, FileActivity.class);
