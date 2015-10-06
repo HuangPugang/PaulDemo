@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import demo.hpg.org.pauldemo.dialog.DialogActivity;
 import demo.hpg.org.pauldemo.getmessage.MessageActivity;
 import java.io.File;
 
@@ -72,6 +73,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button slidingFinishButton;//滑动关闭
 
     private Button jsButton;//js调用
+
+    private Button dialogButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -137,6 +140,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         jsButton = (Button) findViewById(R.id.js);
         jsButton.setOnClickListener(this);
+
+        dialogButton = (Button) findViewById(R.id.dialog);
+        dialogButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -203,6 +209,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
             case R.id.webview:
                 intent.setClass(this, MyWebview.class);
+                break;
+
+            case R.id.dialog:
+                intent.setClass(this, DialogActivity.class);
                 break;
         }
         startActivity(intent);
