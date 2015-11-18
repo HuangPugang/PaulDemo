@@ -20,6 +20,7 @@ import demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity;
 import demo.hpg.org.pauldemo.js.JSActivity;
 import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
+import demo.hpg.org.pauldemo.okhttp.OkHttpActivity;
 import demo.hpg.org.pauldemo.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity;
@@ -75,6 +76,8 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button jsButton;//js调用
 
     private Button dialogButton;
+
+    private Button okhttpButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -143,6 +146,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         dialogButton = (Button) findViewById(R.id.dialog);
         dialogButton.setOnClickListener(this);
+
+        okhttpButton = (Button) findViewById(R.id.okhttp);
+        okhttpButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
@@ -213,6 +219,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
             case R.id.dialog:
                 intent.setClass(this, DialogActivity.class);
+                break;
+            case R.id.okhttp:
+                intent.setClass(this, OkHttpActivity.class);
                 break;
         }
         startActivity(intent);

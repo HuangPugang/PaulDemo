@@ -47,6 +47,6 @@ public class JSActivity extends Activity {
     }
     @JavascriptInterface
     public void startFunction(String str){
-        Toast.makeText(this,"js 调用了java函数2--有参数",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this,"js 调用了java函数2--有参数"+ str,Toast.LENGTH_SHORT).show();
     }
 }

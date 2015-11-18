@@ -108,6 +108,9 @@
         <activity
             android:name=".dialog.DialogActivity"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".okhttp.OkHttpActivity"
+            android:label="@string/app_name"></activity>
         <!--个推-->
         <activity
             android:name=".getuipush.GetuiPushActivity"
