@@ -13,4 +13,4 @@
         android:valueType="floatType"
         android:valueFrom="0"
         android:valueTo="180"/>
-</set><!-- From: file:/Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/res/animator/indicator_animator.xml -->
+</set><!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/animator/indicator_animator.xml -->

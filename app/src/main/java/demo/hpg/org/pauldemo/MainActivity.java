@@ -1,7 +1,6 @@
 package demo.hpg.org.pauldemo;
 
 import android.content.Intent;
-import android.media.Image;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -9,21 +8,23 @@ import android.widget.Button;
 
 import demo.hpg.org.pauldemo.dialog.DialogActivity;
 import demo.hpg.org.pauldemo.getmessage.MessageActivity;
-import java.io.File;
 
 import demo.hpg.org.pauldemo.anim.AnimationActivity;
-import demo.hpg.org.pauldemo.circleindicator.ViewpagerIndicatorActivity;
+import demo.hpg.org.pauldemo.imagecache.ImageCacheActivity;
+import demo.hpg.org.pauldemo.view.circleindicator.ViewpagerIndicatorActivity;
 import demo.hpg.org.pauldemo.file.FileActivity;
 import demo.hpg.org.pauldemo.getphoto.GetPhotoActivity;
 import demo.hpg.org.pauldemo.getuipush.GetuiPushActivity;
 import demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity;
 import demo.hpg.org.pauldemo.js.JSActivity;
 import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
-import demo.hpg.org.pauldemo.moveview.MoveViewActivity;
+import demo.hpg.org.pauldemo.view.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.okhttp.OkHttpActivity;
-import demo.hpg.org.pauldemo.slidingfinish.SlidingActivity;
+import demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActvity;
+import demo.hpg.org.pauldemo.view.requestlayout.RequestView;
+import demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
-import demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity;
+import demo.hpg.org.pauldemo.view.swiperefresh.SwipeRefreshActivity;
 import demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity;
 import demo.hpg.org.pauldemo.upload.UploadActivity;
 import demo.hpg.org.pauldemo.volley.VolleyActivity;
@@ -78,6 +79,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     private Button dialogButton;
 
     private Button okhttpButton;
+    private Button requestButton;
+    private Button imageCacheButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -149,82 +153,121 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         okhttpButton = (Button) findViewById(R.id.okhttp);
         okhttpButton.setOnClickListener(this);
+
+        requestButton = (Button) findViewById(R.id.request);
+        requestButton.setOnClickListener(this);
+
+        imageCacheButton = (Button) findViewById(R.id.imagecache);
+        imageCacheButton.setOnClickListener(this);
     }
     @Override
     public void onClick(View v) {
         Intent intent = new Intent();
         switch (v.getId()) {
             case R.id.light_control:
-                intent.setClass(this, LightControlActivity.class);
+                openActivity(LightControlActivity.class);
                 break;
             case R.id.getphoto:
-                intent.setClass(this, GetPhotoActivity.class);
+                openActivity(GetPhotoActivity.class);
                 break;
             case R.id.volley:
-                intent.setClass(this, VolleyActivity.class);
+                openActivity(VolleyActivity.class);
                 break;
             case R.id.getui:
-                intent.setClass(this, GetuiPushActivity.class);
+                openActivity(GetuiPushActivity.class);
                 break;
             case R.id.sugar:
-                intent.setClass(this, SugarActivity.class);
+                openActivity(SugarActivity.class);
                 break;
             case R.id.myscrollview:
-                intent.setClass(this, MoveViewActivity.class);
+                openActivity(MoveViewActivity.class);
                 break;
             case R.id.swiperefresh:
-                intent.setClass(this, SwipeRefreshActivity.class);
+                openActivity(SwipeRefreshActivity.class);
                 break;
             case R.id.sendBroadcast:
-                intent.setClass(this, MessageActivity.class);
+                openActivity(MessageActivity.class);
                 break;
 
             case R.id.indicator_:
-                intent.setClass(this, ViewpagerIndicatorActivity.class);
+                openActivity(ViewpagerIndicatorActivity.class);
                 break;
 
             case R.id.image_compress:
-                intent.setClass(this, ImageCompressActivity.class);
+                openActivity(ImageCompressActivity.class);
                 break;
 
             case R.id.wifi:
-                intent.setClass(this, WifiManagerActivity.class);
+                openActivity(WifiManagerActivity.class);
                 break;
 
             case R.id.wifi_ap:
 //                intent.setClass(this, WifiApActivity.class);
                 break;
             case R.id.socket:
-                intent.setClass(this, FileActivity.class);
+                openActivity(FileActivity.class);
                 break;
             case R.id.anim:
-                intent.setClass(this, AnimationActivity.class);
+                openActivity(AnimationActivity.class);
                 break;
             case R.id.upload:
-                intent.setClass(this, UploadActivity.class);
+                openActivity(UploadActivity.class);
                 break;
             case R.id.elastic:
-                intent.setClass(this, ElasticScrollViewActivity.class);
+                openActivity(ElasticScrollViewActivity.class);
                 break;
             case R.id.slidingfinish:
-                intent.setClass(this, SlidingActivity.class);
+                openActivity(SlidingActivity.class);
                 break;
             case R.id.js:
-                intent.setClass(this, JSActivity.class);
+                openActivity( JSActivity.class);
                 break;
 
             case R.id.webview:
-                intent.setClass(this, MyWebview.class);
+                openActivity( MyWebview.class);
                 break;
 
             case R.id.dialog:
-                intent.setClass(this, DialogActivity.class);
+                openActivity( DialogActivity.class);
                 break;
             case R.id.okhttp:
-                intent.setClass(this, OkHttpActivity.class);
+                openActivity( OkHttpActivity.class);
+                break;
+            case R.id.request:
+                openActivity( RequestLayoutActvity.class);
+                break;
+
+            case R.id.imagecache:
+                openActivity( ImageCacheActivity.class);
                 break;
         }
+//        startActivity(intent);
+//        overridePendingTransition(R.anim.bottom_in, R.anim.hold);
+    }
+
+
+
+    /**
+     * 通过类名启动Activity
+     *
+     * @param pClass
+     */
+    protected void openActivity(Class<?> pClass) {
+        openActivity(pClass, null);
+    }
+
+    /**
+     * 通过类名启动Activity，并且含有Bundle数据
+     *
+     * @param pClass
+     * @param pBundle
+     */
+    protected void openActivity(Class<?> pClass, Bundle pBundle) {
+        Intent intent = new Intent(this, pClass);
+        if (pBundle != null) {
+            intent.putExtras(pBundle);
+        }
         startActivity(intent);
-        overridePendingTransition(R.anim.bottom_in, R.anim.hold);
+
     }
 }

@@ -25,7 +25,6 @@
 // * Time 14:20
 // */
 //public class WifiApActivity extends Activity {
-//    public static final String TAG = "MainActivity";
 //
 //    private Button mBtn1, mBtn2;
 //

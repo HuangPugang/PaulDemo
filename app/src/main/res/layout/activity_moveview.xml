@@ -20,7 +20,7 @@
         android:layout_height="200dp" />
 
 
-    <demo.hpg.org.pauldemo.moveview.DrawBoardView
+    <demo.hpg.org.pauldemo.view.moveview.DrawBoardView
         android:id="@+id/boardview"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />

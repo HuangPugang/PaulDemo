@@ -54,13 +54,13 @@
             android:name=".sugarorm.SugarActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".moveview.MoveViewActivity"
+            android:name=".view.moveview.MoveViewActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".swiperefresh.SwipeRefreshActivity"
+            android:name=".view.swiperefresh.SwipeRefreshActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".circleindicator.ViewpagerIndicatorActivity"
+            android:name=".view.circleindicator.ViewpagerIndicatorActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".imagecompress.ImageCompressActivity"
@@ -88,19 +88,19 @@
             android:name=".tanxingscrollview.ElasticScrollViewActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".slidingfinish.SlidingActivity"
+            android:name=".view.slidingfinish.SlidingActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".slidingfinish.AbsActivity"
+            android:name=".view.slidingfinish.AbsActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".slidingfinish.NormalActivity"
+            android:name=".view.slidingfinish.NormalActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".slidingfinish.ScrollActivity"
+            android:name=".view.slidingfinish.ScrollActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".slidingfinish.ViewPagerActivity"
+            android:name=".view.slidingfinish.ViewPagerActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".js.JSActivity"
@@ -111,6 +111,13 @@
         <activity
             android:name=".okhttp.OkHttpActivity"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".view.requestlayout.RequestLayoutActvity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".imagecache.ImageCacheActivity"
+            android:label="@string/app_name"></activity>
+
         <!--个推-->
         <activity
             android:name=".getuipush.GetuiPushActivity"
