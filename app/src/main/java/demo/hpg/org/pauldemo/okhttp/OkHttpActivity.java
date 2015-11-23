@@ -132,7 +132,6 @@ public class OkHttpActivity extends Activity {
     private void fileUpload(){
         OkHttpClient okHttpClient = new OkHttpClient();
         File file = new File(android.os.Environment.getExternalStorageDirectory()+"/DCIM/test.jpg");
-
         RequestBody fileBody = RequestBody.create(MediaType.parse("application/octet-stream"), file);
 
         RequestBody requestBody = new MultipartBuilder()
@@ -147,7 +146,7 @@ public class OkHttpActivity extends Activity {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://192.168.3.3:8080/eat/User/upload.do")
+                .url("http://192.168.3.3:8080/eat/Post/write.do?title=test&content=neirong&lat=13j")
                 .post(requestBody)
                 .build();
 
