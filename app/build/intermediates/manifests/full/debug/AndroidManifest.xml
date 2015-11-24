@@ -87,7 +87,7 @@
             android:name="demo.hpg.org.pauldemo.upload.UploadActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity"
+            android:name="demo.hpg.org.pauldemo.view.tanxingscrollview.ElasticScrollViewActivity"
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity"

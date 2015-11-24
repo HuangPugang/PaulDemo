@@ -39,15 +39,15 @@
         </activity>
 
         <activity
-            android:name=".lightcontrol.LightControlActivity"
+            android:name=".system.lightcontrol.LightControlActivity"
             android:label="@string/app_name"></activity>
 
         <activity
-            android:name=".getphoto.GetPhotoActivity"
+            android:name=".system.getphoto.GetPhotoActivity"
             android:label="@string/app_name"></activity>
         <!--volley-->
         <activity
-            android:name=".volley.VolleyActivity"
+            android:name=".network.volley.VolleyActivity"
             android:label="@string/app_name"></activity>
         <!--sugarOrm-->
         <activity
@@ -66,26 +66,26 @@
             android:name=".imagecompress.ImageCompressActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".wifimanager.WifiManagerActivity"
+            android:name=".system.wifimanager.WifiManagerActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".wifimanager.WifiApActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".file.FileActivity"
+            android:name=".system.file.FileActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".anim.AnimationActivity"
             android:label="@string/app_name"
             android:theme="@style/BottomInTheme"></activity>
         <activity
-            android:name=".webview.MyWebview"
+            android:name=".view.webview.MyWebview"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".upload.UploadActivity"
+            android:name=".network.upload.UploadActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".tanxingscrollview.ElasticScrollViewActivity"
+            android:name=".view.tanxingscrollview.ElasticScrollViewActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".view.slidingfinish.SlidingActivity"
@@ -106,10 +106,10 @@
             android:name=".js.JSActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".dialog.DialogActivity"
+            android:name=".view.dialog.DialogActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".okhttp.OkHttpActivity"
+            android:name=".network.okhttp.OkHttpActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".view.requestlayout.RequestLayoutActvity"
@@ -117,7 +117,9 @@
         <activity
             android:name=".imagecache.ImageCacheActivity"
             android:label="@string/app_name"></activity>
-
+        <activity
+            android:name=".view.touch.TouchActivity"
+            android:label="@string/app_name"></activity>
         <!--个推-->
         <activity
             android:name=".getuipush.GetuiPushActivity"

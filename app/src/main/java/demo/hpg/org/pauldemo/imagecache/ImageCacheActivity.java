@@ -9,7 +9,7 @@ import demo.hpg.org.pauldemo.R;
 
 /**
  * 照片墙主活动，使用GridView展示照片墙。
- * 
+ * url:http://blog.csdn.net/guolin_blog/article/details/34093441
  * @author guolin
  */
 public class ImageCacheActivity extends Activity {

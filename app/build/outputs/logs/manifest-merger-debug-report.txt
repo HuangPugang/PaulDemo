@@ -198,12 +198,12 @@ ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/Andr
 		ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/AndroidManifest.xml:86:13-45
 	android:name
 		ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/AndroidManifest.xml:85:13-50
-activity#demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity
+activity#demo.hpg.org.pauldemo.view.tanxingscrollview.ElasticScrollViewActivity
 ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/AndroidManifest.xml:87:9-89:57
 	android:label
 		ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/AndroidManifest.xml:89:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/AndroidManifest.xml:88:13-72
+		ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/AndroidManifest.xml:88:13-77
 activity#demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity
 ADDED from /Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/AndroidManifest.xml:90:9-92:57
 	android:label

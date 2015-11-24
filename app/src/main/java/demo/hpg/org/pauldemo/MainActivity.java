@@ -1,42 +1,41 @@
 package demo.hpg.org.pauldemo;
 
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import demo.hpg.org.pauldemo.dialog.DialogActivity;
-import demo.hpg.org.pauldemo.getmessage.MessageActivity;
+import demo.hpg.org.pauldemo.base.BaseActivity;
+import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
+import demo.hpg.org.pauldemo.system.getmessage.MessageActivity;
 
 import demo.hpg.org.pauldemo.anim.AnimationActivity;
 import demo.hpg.org.pauldemo.imagecache.ImageCacheActivity;
 import demo.hpg.org.pauldemo.view.circleindicator.ViewpagerIndicatorActivity;
-import demo.hpg.org.pauldemo.file.FileActivity;
-import demo.hpg.org.pauldemo.getphoto.GetPhotoActivity;
+import demo.hpg.org.pauldemo.system.file.FileActivity;
+import demo.hpg.org.pauldemo.system.getphoto.GetPhotoActivity;
 import demo.hpg.org.pauldemo.getuipush.GetuiPushActivity;
 import demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity;
 import demo.hpg.org.pauldemo.js.JSActivity;
-import demo.hpg.org.pauldemo.lightcontrol.LightControlActivity;
+import demo.hpg.org.pauldemo.system.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.view.moveview.MoveViewActivity;
-import demo.hpg.org.pauldemo.okhttp.OkHttpActivity;
+import demo.hpg.org.pauldemo.network.okhttp.OkHttpActivity;
 import demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActvity;
-import demo.hpg.org.pauldemo.view.requestlayout.RequestView;
 import demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.view.swiperefresh.SwipeRefreshActivity;
-import demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity;
-import demo.hpg.org.pauldemo.upload.UploadActivity;
-import demo.hpg.org.pauldemo.volley.VolleyActivity;
-import demo.hpg.org.pauldemo.webview.MyWebview;
+import demo.hpg.org.pauldemo.view.tanxingscrollview.ElasticScrollViewActivity;
+import demo.hpg.org.pauldemo.network.upload.UploadActivity;
+import demo.hpg.org.pauldemo.network.volley.VolleyActivity;
+import demo.hpg.org.pauldemo.view.webview.MyWebview;
 //import demo.hpg.org.pauldemo.wifimanager.WifiApActivity;
-import demo.hpg.org.pauldemo.wifimanager.WifiManagerActivity;
+import demo.hpg.org.pauldemo.system.wifimanager.WifiManagerActivity;
 
 
 /**
  * 主程序入口
  */
-public class MainActivity extends ActionBarActivity implements View.OnClickListener {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button lightControlButton;//亮度调节
 
@@ -90,75 +89,51 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     }
 
     private void initView() {
-        lightControlButton = (Button) findViewById(R.id.light_control);
-        lightControlButton.setOnClickListener(this);
+        findViewAndOnclick(lightControlButton, R.id.light_control);
 
-        getPhotoButton = (Button) findViewById(R.id.getphoto);
-        getPhotoButton.setOnClickListener(this);
+        findViewAndOnclick(getPhotoButton, R.id.getphoto);
 
+        findViewAndOnclick(volleyButton, R.id.volley);
 
-        volleyButton = (Button) findViewById(R.id.volley);
-        volleyButton.setOnClickListener(this);
+        findViewAndOnclick(getuiButton, R.id.getui);
 
-        getuiButton = (Button) findViewById(R.id.getui);
-        getuiButton.setOnClickListener(this);
+        findViewAndOnclick(sugarButton, R.id.sugar);
 
-        sugarButton = (Button) findViewById(R.id.sugar);
-        sugarButton.setOnClickListener(this);
+        findViewAndOnclick(myscrollButton, R.id.myscrollview);
 
-        myscrollButton = (Button) findViewById(R.id.myscrollview);
-        myscrollButton.setOnClickListener(this);
+        findViewAndOnclick(swiperefreshButton, R.id.swiperefresh);
 
-        swiperefreshButton = (Button) findViewById(R.id.swiperefresh);
-        swiperefreshButton.setOnClickListener(this);
+        findViewAndOnclick(sendBroadcastButton, R.id.sendBroadcast);
 
-        sendBroadcastButton = (Button) findViewById(R.id.sendBroadcast);
-        sendBroadcastButton.setOnClickListener(this);
+        findViewAndOnclick(indicatorButton, R.id.indicator_);
 
-        indicatorButton = (Button) findViewById(R.id.indicator_);
-        indicatorButton.setOnClickListener(this);
+        findViewAndOnclick(imgCompressButton, R.id.image_compress);
 
-        imgCompressButton= (Button) findViewById(R.id.image_compress);
-        imgCompressButton.setOnClickListener(this);
+        findViewAndOnclick(wifiButton, R.id.wifi);
 
-        wifiButton  = (Button) findViewById(R.id.wifi);
-        wifiButton.setOnClickListener(this);
+        findViewAndOnclick(wifiApButton, R.id.wifi_ap);
 
-        wifiApButton = (Button) findViewById(R.id.wifi_ap);
-        wifiApButton.setOnClickListener(this);
+        findViewAndOnclick(socketButton, R.id.socket);
 
-        socketButton = (Button) findViewById(R.id.socket);
-        socketButton.setOnClickListener(this);
+        findViewAndOnclick(animButton, R.id.anim);
 
-        animButton = (Button) findViewById(R.id.anim);
-        animButton.setOnClickListener(this);
+        findViewAndOnclick(webButton, R.id.webview);
 
-        webButton = (Button) findViewById(R.id.webview);
-        webButton.setOnClickListener(this);
+        findViewAndOnclick(uploadButton, R.id.upload);
 
-        uploadButton = (Button) findViewById(R.id.upload);
-        uploadButton.setOnClickListener(this);
+        findViewAndOnclick(elasticButton, R.id.elastic);
 
-        elasticButton = (Button) findViewById(R.id.elastic);
-        elasticButton.setOnClickListener(this);
+        findViewAndOnclick(slidingFinishButton, R.id.slidingfinish);
 
-        slidingFinishButton = (Button) findViewById(R.id.slidingfinish);
-        slidingFinishButton.setOnClickListener(this);
+        findViewAndOnclick(jsButton, R.id.js);
 
-        jsButton = (Button) findViewById(R.id.js);
-        jsButton.setOnClickListener(this);
+        findViewAndOnclick(dialogButton, R.id.dialog);
 
-        dialogButton = (Button) findViewById(R.id.dialog);
-        dialogButton.setOnClickListener(this);
+        findViewAndOnclick(okhttpButton, R.id.okhttp);
 
-        okhttpButton = (Button) findViewById(R.id.okhttp);
-        okhttpButton.setOnClickListener(this);
+        findViewAndOnclick(requestButton, R.id.request);
 
-        requestButton = (Button) findViewById(R.id.request);
-        requestButton.setOnClickListener(this);
-
-        imageCacheButton = (Button) findViewById(R.id.imagecache);
-        imageCacheButton.setOnClickListener(this);
+        findViewAndOnclick(imageCacheButton, R.id.imagecache);
     }
     @Override
     public void onClick(View v) {
@@ -220,54 +195,32 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
                 openActivity(SlidingActivity.class);
                 break;
             case R.id.js:
-                openActivity( JSActivity.class);
+                openActivity(JSActivity.class);
                 break;
 
             case R.id.webview:
-                openActivity( MyWebview.class);
+                openActivity(MyWebview.class);
                 break;
 
             case R.id.dialog:
-                openActivity( DialogActivity.class);
+                openActivity(DialogActivity.class);
                 break;
             case R.id.okhttp:
-                openActivity( OkHttpActivity.class);
+                openActivity(OkHttpActivity.class);
                 break;
             case R.id.request:
-                openActivity( RequestLayoutActvity.class);
+                openActivity(RequestLayoutActvity.class);
                 break;
 
             case R.id.imagecache:
-                openActivity( ImageCacheActivity.class);
+                openActivity(ImageCacheActivity.class);
                 break;
         }
-//        startActivity(intent);
-//        overridePendingTransition(R.anim.bottom_in, R.anim.hold);
     }
 
-
-
-    /**
-     * 通过类名启动Activity
-     *
-     * @param pClass
-     */
-    protected void openActivity(Class<?> pClass) {
-        openActivity(pClass, null);
+    private void findViewAndOnclick(Button button,int resourceId){
+        button = fvById(resourceId);
+        button.setOnClickListener(this);
     }
 
-    /**
-     * 通过类名启动Activity，并且含有Bundle数据
-     *
-     * @param pClass
-     * @param pBundle
-     */
-    protected void openActivity(Class<?> pClass, Bundle pBundle) {
-        Intent intent = new Intent(this, pClass);
-        if (pBundle != null) {
-            intent.putExtras(pBundle);
-        }
-        startActivity(intent);
-
-    }
 }
