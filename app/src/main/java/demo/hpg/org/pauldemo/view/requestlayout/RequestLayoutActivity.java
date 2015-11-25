@@ -13,11 +13,13 @@ import demo.hpg.org.pauldemo.R;
 /**
  * Created by Paul on 15/11/20.
  */
-public class RequestLayoutActvity extends Activity {
+public class RequestLayoutActivity extends Activity {
     private RequestView view ;
     private Button big;
     private Button small;
     private int height = 50;
+    private Button remove;
+    private int moveX = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +31,9 @@ public class RequestLayoutActvity extends Activity {
             public void onClick(View v) {
                 height = height +10;
                 view.requestLayout(height);
+
+                remove.requestLayout();
+                moveX = moveX +10;
             }
         });
         small = (Button) findViewById(R.id.small);
@@ -37,8 +42,11 @@ public class RequestLayoutActvity extends Activity {
             public void onClick(View v) {
                 height = height -10;
                 view.requestLayout(height);
+                remove.layout(remove.getLeft()-moveX,remove.getTop()-moveX,remove.getRight()-moveX,remove.getBottom()-moveX);
+                moveX = moveX -10;
             }
         });
+        remove = (Button) findViewById(R.id.removable);
         test();
     }
 

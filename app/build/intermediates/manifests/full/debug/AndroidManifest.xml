@@ -42,14 +42,14 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="demo.hpg.org.pauldemo.lightcontrol.LightControlActivity"
+            android:name="demo.hpg.org.pauldemo.system.lightcontrol.LightControlActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.getphoto.GetPhotoActivity"
+            android:name="demo.hpg.org.pauldemo.system.getphoto.GetPhotoActivity"
             android:label="@string/app_name" />
         <!-- volley -->
         <activity
-            android:name="demo.hpg.org.pauldemo.volley.VolleyActivity"
+            android:name="demo.hpg.org.pauldemo.network.volley.VolleyActivity"
             android:label="@string/app_name" />
         <!-- sugarOrm -->
         <activity
@@ -68,23 +68,23 @@
             android:name="demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.wifimanager.WifiManagerActivity"
+            android:name="demo.hpg.org.pauldemo.system.wifimanager.WifiManagerActivity"
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.wifimanager.WifiApActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.file.FileActivity"
+            android:name="demo.hpg.org.pauldemo.system.file.FileActivity"
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.anim.AnimationActivity"
             android:label="@string/app_name"
             android:theme="@style/BottomInTheme" />
         <activity
-            android:name="demo.hpg.org.pauldemo.webview.MyWebview"
+            android:name="demo.hpg.org.pauldemo.view.webview.MyWebview"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.upload.UploadActivity"
+            android:name="demo.hpg.org.pauldemo.network.upload.UploadActivity"
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.view.tanxingscrollview.ElasticScrollViewActivity"
@@ -108,18 +108,29 @@
             android:name="demo.hpg.org.pauldemo.js.JSActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.dialog.DialogActivity"
+            android:name="demo.hpg.org.pauldemo.view.dialog.DialogActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.okhttp.OkHttpActivity"
+            android:name="demo.hpg.org.pauldemo.network.okhttp.OkHttpActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActvity"
+            android:name="demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActivity"
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.imagecache.ImageCacheActivity"
             android:label="@string/app_name" />
-
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.touch.TouchActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.stickscroll.StickyScrollActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.clip.ClipActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.nostatus.NoStatusActivity"
+            android:label="@string/app_name" />
         <!-- 个推 -->
         <activity
             android:name="demo.hpg.org.pauldemo.getuipush.GetuiPushActivity"

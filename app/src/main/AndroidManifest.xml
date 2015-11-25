@@ -112,13 +112,22 @@
             android:name=".network.okhttp.OkHttpActivity"
             android:label="@string/app_name"></activity>
         <activity
-            android:name=".view.requestlayout.RequestLayoutActvity"
+            android:name=".view.requestlayout.RequestLayoutActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".imagecache.ImageCacheActivity"
             android:label="@string/app_name"></activity>
         <activity
             android:name=".view.touch.TouchActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".view.stickscroll.StickyScrollActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".view.clip.ClipActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".view.nostatus.NoStatusActivity"
             android:label="@string/app_name"></activity>
         <!--个推-->
         <activity

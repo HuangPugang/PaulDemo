@@ -39,21 +39,14 @@ public class OkHttpActivity extends Activity implements ResponseCallback {
     private ConcurrentHashMap<String,String>  param = new ConcurrentHashMap<>();
     private void init(){
 
-//        okHttpGet();
-//        postFile();
-//        okHttpPost();
+
         param.put("sign","2bd6094689539e50ca54f96472b4c45e");
         param.put("biz_form_id", "1376");
         findViewById(R.id.upload).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 NetworkRequest.getInstance().dispatchRequest(NetworkRequest.Type.GET, OkHttpActivity.this, 1, url, param);
-//                fileUpload();
-//                try {
-//                    run();
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
+
             }
         });
     }

@@ -3,9 +3,11 @@ package demo.hpg.org.pauldemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import demo.hpg.org.pauldemo.base.BaseActivity;
+import demo.hpg.org.pauldemo.view.clip.ClipActivity;
 import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
 import demo.hpg.org.pauldemo.system.getmessage.MessageActivity;
 
@@ -20,9 +22,11 @@ import demo.hpg.org.pauldemo.js.JSActivity;
 import demo.hpg.org.pauldemo.system.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.view.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.network.okhttp.OkHttpActivity;
-import demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActvity;
+import demo.hpg.org.pauldemo.view.nostatus.NoStatusActivity;
+import demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActivity;
 import demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
+import demo.hpg.org.pauldemo.view.stickscroll.StickyScrollActivity;
 import demo.hpg.org.pauldemo.view.swiperefresh.SwipeRefreshActivity;
 import demo.hpg.org.pauldemo.view.tanxingscrollview.ElasticScrollViewActivity;
 import demo.hpg.org.pauldemo.network.upload.UploadActivity;
@@ -80,6 +84,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button okhttpButton;
     private Button requestButton;
     private Button imageCacheButton;
+    private Button stickButton;
+    private Button clipButton;
+
+    private Button nostatusButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,6 +142,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(requestButton, R.id.request);
 
         findViewAndOnclick(imageCacheButton, R.id.imagecache);
+
+        findViewAndOnclick(stickButton,R.id.stick);
+
+        findViewAndOnclick(clipButton,R.id.clip);
+
+        findViewAndOnclick(nostatusButton,R.id.nostatus);
     }
     @Override
     public void onClick(View v) {
@@ -209,12 +223,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 openActivity(OkHttpActivity.class);
                 break;
             case R.id.request:
-                openActivity(RequestLayoutActvity.class);
+                openActivity(RequestLayoutActivity.class);
                 break;
 
             case R.id.imagecache:
                 openActivity(ImageCacheActivity.class);
                 break;
+            case R.id.stick:
+                openActivity(StickyScrollActivity.class);
+                break;
+            case R.id.clip:
+                openActivity(ClipActivity.class);
+                break;
+            case R.id.nostatus:
+                openActivity(NoStatusActivity.class);
+                break;
+
         }
     }
 

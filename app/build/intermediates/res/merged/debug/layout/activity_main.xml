@@ -142,7 +142,22 @@
             android:id="@+id/imagecache"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Button
+            android:text="StickScroll"
+            android:id="@+id/stick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
 
+        <Button
+            android:text="Clip"
+            android:id="@+id/clip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="NoStatus"
+            android:id="@+id/nostatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
 <!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->
