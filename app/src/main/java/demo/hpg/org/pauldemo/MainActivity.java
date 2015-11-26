@@ -23,6 +23,7 @@ import demo.hpg.org.pauldemo.system.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.view.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.network.okhttp.OkHttpActivity;
 import demo.hpg.org.pauldemo.view.nostatus.NoStatusActivity;
+import demo.hpg.org.pauldemo.view.recycleview.RecycleActivity;
 import demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActivity;
 import demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
@@ -88,6 +89,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button clipButton;
 
     private Button nostatusButton;
+    private Button recycleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -148,6 +150,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(clipButton,R.id.clip);
 
         findViewAndOnclick(nostatusButton,R.id.nostatus);
+
+        findViewAndOnclick(recycleButton,R.id.recycle);
     }
     @Override
     public void onClick(View v) {
@@ -238,7 +242,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.nostatus:
                 openActivity(NoStatusActivity.class);
                 break;
-
+            case R.id.recycle:
+                openActivity(RecycleActivity.class);
+                break;
         }
     }
 
