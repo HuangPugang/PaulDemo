@@ -6,6 +6,7 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,7 +14,9 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import demo.hpg.org.pauldemo.R;
 
@@ -22,11 +25,14 @@ import demo.hpg.org.pauldemo.R;
  * Date 2015/3/19
  * Time 11:26
  */
-public class AnimationActivity extends Activity {
+public class AnimationActivity extends Activity implements View.OnClickListener, RotateAnimation.InterpolatedTimeListener {
     private Button changeBG;
-    private RelativeLayout relativeLayout;
+    private LinearLayout relativeLayout;
     private Button showTips;
-    private LayoutInflater inflater ;
+    private LayoutInflater inflater;
+    private Button btnIncrease, btnDecrease;
+    private TextView txtNumber;
+    private int number;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,7 +40,7 @@ public class AnimationActivity extends Activity {
         inflater = LayoutInflater.from(this);
         changeBG = (Button) findViewById(R.id.change);
         showTips = (Button) findViewById(R.id.show_tip);
-        relativeLayout = (RelativeLayout) findViewById(R.id.layout);
+        relativeLayout = (LinearLayout) findViewById(R.id.layout);
 
 
         changeBG.setOnClickListener(new View.OnClickListener() {
@@ -51,25 +57,64 @@ public class AnimationActivity extends Activity {
                 showListRefreshPopResult();
             }
         });
+
+        btnIncrease = (Button) findViewById(R.id.btnIncrease);
+        btnDecrease = (Button) findViewById(R.id.btnDecrease);
+        txtNumber = (TextView) findViewById(R.id.txtNumber);
+
+        btnIncrease.setOnClickListener(this);
+        btnDecrease.setOnClickListener(this);
+
+        number = 3;
+        txtNumber = (TextView) findViewById(R.id.txtNumber);
+        txtNumber.setText(Integer.toString(number));
     }
 
 
     @Override
     public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode==KeyEvent.KEYCODE_BACK){
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
             this.finish();
-            overridePendingTransition(R.anim.hold,R.anim.bottom_out);
+            overridePendingTransition(R.anim.hold, R.anim.bottom_out);
         }
         return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public void interpolatedTime(float interpolatedTime) {
+        // 监听到翻转进度过半时，更新txtNumber显示内容。
+        if ( interpolatedTime > 0.5f) {
+            txtNumber.setText(Integer.toString(number));
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        RotateAnimation rotateAnim = null;
+        float cX = txtNumber.getWidth() / 2.0f;
+        float cY = txtNumber.getHeight() / 2.0f;
+        Log.e("HPG", "cx=" + cX + ",cy=" + cY);
+        if (v == btnDecrease) {
+            number--;
+            rotateAnim = new RotateAnimation(cX, cY, RotateAnimation.ROTATE_DECREASE);
+        } else if (v == btnIncrease) {
+            number++;
+            rotateAnim = new RotateAnimation(cX, cY, RotateAnimation.ROTATE_INCREASE);
+        }
+        if (rotateAnim != null) {
+            rotateAnim.setInterpolatedTimeListener(this);
+            rotateAnim.setFillAfter(true);
+            txtNumber.startAnimation(rotateAnim);
+        }
     }
 
     /**
      * 属性动画
      */
-    public class AnimationView extends View{
+    public class AnimationView extends View {
         public AnimationView(Context context) {
             super(context);
-            ObjectAnimator objectAnimator=
+            ObjectAnimator objectAnimator =
                     (ObjectAnimator) AnimatorInflater.loadAnimator(AnimationActivity.this, R.animator.color_animation);
             objectAnimator.setEvaluator(new ArgbEvaluator());
             objectAnimator.setTarget(this);
@@ -83,7 +128,7 @@ public class AnimationActivity extends Activity {
      */
     protected void showListRefreshPopResult() {
 
-        final View tipView  = inflater.inflate(R.layout.tip,null);
+        final View tipView = inflater.inflate(R.layout.tip, null);
         ViewGroup.LayoutParams params = new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
 
         relativeLayout.addView(tipView, params);

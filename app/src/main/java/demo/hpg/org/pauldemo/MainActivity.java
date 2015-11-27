@@ -7,6 +7,7 @@ import android.view.WindowManager;
 import android.widget.Button;
 
 import demo.hpg.org.pauldemo.base.BaseActivity;
+import demo.hpg.org.pauldemo.rxjava.RxJavaActivity;
 import demo.hpg.org.pauldemo.view.clip.ClipActivity;
 import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
 import demo.hpg.org.pauldemo.system.getmessage.MessageActivity;
@@ -91,6 +92,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button nostatusButton;
     private Button recycleButton;
 
+    private Button rxjavaButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -152,6 +155,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(nostatusButton,R.id.nostatus);
 
         findViewAndOnclick(recycleButton,R.id.recycle);
+
+        findViewAndOnclick(rxjavaButton,R.id.rxjava);
     }
     @Override
     public void onClick(View v) {
@@ -244,6 +249,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.recycle:
                 openActivity(RecycleActivity.class);
+                break;
+            case R.id.rxjava:
+                openActivity(RxJavaActivity.class);
                 break;
         }
     }

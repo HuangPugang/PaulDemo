@@ -134,6 +134,9 @@
         <activity
             android:name="demo.hpg.org.pauldemo.view.recycleview.RecycleActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.rxjava.RxJavaActivity"
+            android:label="@string/app_name" />
         <!-- 个推 -->
         <activity
             android:name="demo.hpg.org.pauldemo.getuipush.GetuiPushActivity"

@@ -163,6 +163,11 @@
             android:id="@+id/recycle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Button
+            android:text="RxJava"
+            android:id="@+id/rxjava"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
 <!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->
