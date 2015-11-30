@@ -3,7 +3,6 @@ package demo.hpg.org.pauldemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
 import demo.hpg.org.pauldemo.base.BaseActivity;
@@ -24,11 +23,13 @@ import demo.hpg.org.pauldemo.system.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.view.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.network.okhttp.OkHttpActivity;
 import demo.hpg.org.pauldemo.view.nostatus.NoStatusActivity;
+import demo.hpg.org.pauldemo.view.pulltozoom.PullToZoomActivity;
 import demo.hpg.org.pauldemo.view.recycleview.RecycleActivity;
 import demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActivity;
 import demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.view.stickscroll.StickyScrollActivity;
+import demo.hpg.org.pauldemo.view.swipelayout.SwipeLayoutActivity;
 import demo.hpg.org.pauldemo.view.swiperefresh.SwipeRefreshActivity;
 import demo.hpg.org.pauldemo.view.tanxingscrollview.ElasticScrollViewActivity;
 import demo.hpg.org.pauldemo.network.upload.UploadActivity;
@@ -94,6 +95,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button rxjavaButton;
 
+    private Button swipeButton;
+
+    private Button pullTozoomButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,6 +162,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(recycleButton,R.id.recycle);
 
         findViewAndOnclick(rxjavaButton,R.id.rxjava);
+
+        findViewAndOnclick(swipeButton,R.id.swipe);
+
+        findViewAndOnclick(pullTozoomButton,R.id.pulltozoom);
     }
     @Override
     public void onClick(View v) {
@@ -252,6 +261,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.rxjava:
                 openActivity(RxJavaActivity.class);
+                break;
+            case R.id.swipe:
+                openActivity(SwipeLayoutActivity.class);
+                break;
+            case R.id.pulltozoom:
+                openActivity(PullToZoomActivity.class);
                 break;
         }
     }

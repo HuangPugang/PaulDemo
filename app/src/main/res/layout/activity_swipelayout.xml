@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<demo.hpg.org.pauldemo.view.swipelayout.SwipeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/sample3"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:tag="Bottom">
+
+        <RelativeLayout
+            android:id="@+id/bottom_wrapper_child1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#BDBEC2">
+
+            <ImageView
+                android:id="@+id/star"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_launcher" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:padding="10dp"
+        android:tag="Hover"
+        android:text="None is of freedom or of life deserving unless he daily conquers it anew. " />
+</demo.hpg.org.pauldemo.view.swipelayout.SwipeLayout>

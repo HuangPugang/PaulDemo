@@ -93,7 +93,6 @@ public class AnimationActivity extends Activity implements View.OnClickListener,
         RotateAnimation rotateAnim = null;
         float cX = txtNumber.getWidth() / 2.0f;
         float cY = txtNumber.getHeight() / 2.0f;
-        Log.e("HPG", "cx=" + cX + ",cy=" + cY);
         if (v == btnDecrease) {
             number--;
             rotateAnim = new RotateAnimation(cX, cY, RotateAnimation.ROTATE_DECREASE);

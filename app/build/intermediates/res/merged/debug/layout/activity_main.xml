@@ -168,6 +168,16 @@
             android:id="@+id/rxjava"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Button
+            android:text="SWIPE"
+            android:id="@+id/swipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="PullToZoom"
+            android:id="@+id/pulltozoom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
 <!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->
