@@ -1,6 +1,6 @@
-<demo.hpg.org.pauldemo.slidingfinish.view.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<demo.hpg.org.pauldemo.view.slidingfinish.view.SwipeBackLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
     
-</demo.hpg.org.pauldemo.slidingfinish.view.SwipeBackLayout><!-- From: file:/Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/res/layout/base.xml -->
+</demo.hpg.org.pauldemo.view.slidingfinish.view.SwipeBackLayout><!-- From: file:/Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/res/layout/base.xml -->

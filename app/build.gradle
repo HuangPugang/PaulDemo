@@ -29,8 +29,7 @@ dependencies {
     compile 'com.google.code.gson:gson:2.2.4'
     compile project(':circleindicator')
     compile project(':utils')
-
     compile 'com.squareup.okhttp:okhttp:2.4.0'
     compile 'com.squareup.okio:okio:1.5.0'
-
+    compile files('libs/nineoldandroids-2.4.0.jar')
 }

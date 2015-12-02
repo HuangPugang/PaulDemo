@@ -56,13 +56,13 @@
             android:name="demo.hpg.org.pauldemo.sugarorm.SugarActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.moveview.MoveViewActivity"
+            android:name="demo.hpg.org.pauldemo.view.moveview.MoveViewActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity"
+            android:name="demo.hpg.org.pauldemo.view.swiperefresh.SwipeRefreshActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.circleindicator.ViewpagerIndicatorActivity"
+            android:name="demo.hpg.org.pauldemo.view.circleindicator.ViewpagerIndicatorActivity"
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity"
@@ -90,19 +90,19 @@
             android:name="demo.hpg.org.pauldemo.tanxingscrollview.ElasticScrollViewActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.slidingfinish.SlidingActivity"
+            android:name="demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.slidingfinish.AbsActivity"
+            android:name="demo.hpg.org.pauldemo.view.slidingfinish.AbsActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.slidingfinish.NormalActivity"
+            android:name="demo.hpg.org.pauldemo.view.slidingfinish.NormalActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.slidingfinish.ScrollActivity"
+            android:name="demo.hpg.org.pauldemo.view.slidingfinish.ScrollActivity"
             android:label="@string/app_name" />
         <activity
-            android:name="demo.hpg.org.pauldemo.slidingfinish.ViewPagerActivity"
+            android:name="demo.hpg.org.pauldemo.view.slidingfinish.ViewPagerActivity"
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.js.JSActivity"
@@ -113,6 +113,13 @@
         <activity
             android:name="demo.hpg.org.pauldemo.okhttp.OkHttpActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActvity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.imagecache.ImageCacheActivity"
+            android:label="@string/app_name" />
+
         <!-- 个推 -->
         <activity
             android:name="demo.hpg.org.pauldemo.getuipush.GetuiPushActivity"

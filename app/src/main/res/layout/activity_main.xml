@@ -132,5 +132,16 @@
             android:id="@+id/okhttp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Button
+            android:text="RequestLayout"
+            android:id="@+id/request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <Button
+            android:text="ImageCache"
+            android:id="@+id/imagecache"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
     </LinearLayout>
 </ScrollView>

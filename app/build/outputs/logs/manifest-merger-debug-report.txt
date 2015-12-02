@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:2:1-225:12
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:2:1-232:12
 	xmlns:android
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:2:11-69
 	package
@@ -72,7 +72,7 @@ ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/mai
 	android:name
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:21:9-75
 application
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:25:5-223:19
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:25:5-230:19
 MERGED from [com.android.support:recyclerview-v7:21.0.2] /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.2/AndroidManifest.xml:17:5-19:19
 MERGED from [com.android.support:support-v4:21.0.2] /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/build/intermediates/exploded-aar/com.android.support/support-v4/21.0.2/AndroidManifest.xml:16:5-19
 MERGED from [com.android.support:appcompat-v7:21.0.2] /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.2/AndroidManifest.xml:16:5-19
@@ -136,24 +136,24 @@ ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/mai
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:55:13-45
 	android:name
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:54:13-51
-activity#demo.hpg.org.pauldemo.moveview.MoveViewActivity
+activity#demo.hpg.org.pauldemo.view.moveview.MoveViewActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:56:9-58:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:58:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:57:13-54
-activity#demo.hpg.org.pauldemo.swiperefresh.SwipeRefreshActivity
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:57:13-59
+activity#demo.hpg.org.pauldemo.view.swiperefresh.SwipeRefreshActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:59:9-61:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:61:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:60:13-62
-activity#demo.hpg.org.pauldemo.circleindicator.ViewpagerIndicatorActivity
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:60:13-67
+activity#demo.hpg.org.pauldemo.view.circleindicator.ViewpagerIndicatorActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:62:9-64:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:64:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:63:13-71
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:63:13-76
 activity#demo.hpg.org.pauldemo.imagecompress.ImageCompressActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:65:9-67:57
 	android:label
@@ -204,36 +204,36 @@ ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/mai
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:89:13-45
 	android:name
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:88:13-72
-activity#demo.hpg.org.pauldemo.slidingfinish.SlidingActivity
+activity#demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:90:9-92:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:92:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:91:13-58
-activity#demo.hpg.org.pauldemo.slidingfinish.AbsActivity
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:91:13-63
+activity#demo.hpg.org.pauldemo.view.slidingfinish.AbsActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:93:9-95:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:95:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:94:13-54
-activity#demo.hpg.org.pauldemo.slidingfinish.NormalActivity
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:94:13-59
+activity#demo.hpg.org.pauldemo.view.slidingfinish.NormalActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:96:9-98:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:98:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:97:13-57
-activity#demo.hpg.org.pauldemo.slidingfinish.ScrollActivity
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:97:13-62
+activity#demo.hpg.org.pauldemo.view.slidingfinish.ScrollActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:99:9-101:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:101:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:100:13-57
-activity#demo.hpg.org.pauldemo.slidingfinish.ViewPagerActivity
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:100:13-62
+activity#demo.hpg.org.pauldemo.view.slidingfinish.ViewPagerActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:102:9-104:57
 	android:label
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:104:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:103:13-60
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:103:13-65
 activity#demo.hpg.org.pauldemo.js.JSActivity
 ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:105:9-107:57
 	android:label
@@ -252,184 +252,196 @@ ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/mai
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:113:13-45
 	android:name
 		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:112:13-50
+activity#demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActvity
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:114:9-116:57
+	android:label
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:116:13-45
+	android:name
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:115:13-68
+activity#demo.hpg.org.pauldemo.imagecache.ImageCacheActivity
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:117:9-119:57
+	android:label
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:119:13-45
+	android:name
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:118:13-58
 activity#demo.hpg.org.pauldemo.getuipush.GetuiPushActivity
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:115:9-117:57
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:122:9-124:57
 	android:label
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:117:13-45
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:124:13-45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:116:13-56
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:123:13-56
 receiver#demo.hpg.org.pauldemo.getuipush.GetuiPushReceiver
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:119:9-126:20
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:126:9-133:20
 	android:exported
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:121:13-37
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:128:13-37
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:120:13-56
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:127:13-56
 intent-filter#com.igexin.sdk.action.syVq0NWMgYAJFW9JeeJRw9
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:122:13-125:29
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:129:13-132:29
 action#com.igexin.sdk.action.syVq0NWMgYAJFW9JeeJRw9
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:124:17-87
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:131:17-87
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:124:25-84
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:131:25-84
 meta-data#PUSH_APPID
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:128:9-130:54
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:135:9-137:54
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:129:13-38
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:136:13-38
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:130:13-51
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:137:13-51
 meta-data#PUSH_APPKEY
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:132:9-134:54
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:139:9-141:54
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:133:13-39
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:140:13-39
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:134:13-51
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:141:13-51
 meta-data#PUSH_APPSECRET
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:136:9-138:53
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:143:9-145:53
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:137:13-42
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:144:13-42
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:138:13-50
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:145:13-50
 meta-data#PUSH_GROUPID
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:140:9-142:32
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:147:9-149:32
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:141:13-40
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:148:13-40
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:142:13-29
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:149:13-29
 service#com.igexin.sdk.PushService
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:143:9-147:54
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:150:9-154:54
 	android:label
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:146:13-47
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:153:13-47
 	android:process
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:147:13-43
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:154:13-43
 	android:exported
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:145:13-36
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:152:13-36
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:144:13-54
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:151:13-54
 receiver#com.igexin.sdk.PushReceiver
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:149:9-156:20
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:156:9-163:20
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:149:19-61
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:156:19-61
 intent-filter#android.intent.action.BOOT_COMPLETED+android.intent.action.USER_PRESENT+android.net.conn.CONNECTIVITY_CHANGE+com.igexin.sdk.action.refreshls
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:150:13-155:29
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:157:13-162:29
 action#android.intent.action.BOOT_COMPLETED
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:151:17-79
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:158:17-79
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:151:25-76
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:158:25-76
 action#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:152:17-79
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:159:17-79
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:152:25-76
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:159:25-76
 action#android.intent.action.USER_PRESENT
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:153:17-77
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:160:17-77
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:153:25-74
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:160:25-74
 action#com.igexin.sdk.action.refreshls
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:154:17-74
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:161:17-74
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:154:25-71
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:161:25-71
 receiver#com.igexin.sdk.PushManagerReceiver
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:157:9-163:20
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:164:9-170:20
 	android:exported
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:159:13-37
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:166:13-37
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:158:13-62
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:165:13-62
 intent-filter#com.igexin.sdk.action.pushmanager
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:160:13-162:29
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:167:13-169:29
 action#com.igexin.sdk.action.pushmanager
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:161:17-76
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:168:17-76
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:161:25-73
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:168:25-73
 activity#com.igexin.sdk.PushActivity
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:165:9-171:84
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:172:9-178:84
 	android:theme
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:171:13-72
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:178:13-72
 	android:process
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:169:13-43
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:176:13-43
 	android:exported
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:168:13-37
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:175:13-37
 	android:excludeFromRecents
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:167:13-46
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:174:13-46
 	android:taskAffinity
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:170:13-67
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:177:13-67
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:166:13-55
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:173:13-55
 activity#com.igexin.getuiext.activity.GetuiExtActivity
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:173:9-180:40
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:180:9-187:40
 	android:configChanges
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:175:13-72
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:182:13-72
 	android:theme
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:179:13-72
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:186:13-72
 	android:process
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:177:13-43
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:184:13-43
 	android:exported
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:180:13-37
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:187:13-37
 	android:excludeFromRecents
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:176:13-46
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:183:13-46
 	android:taskAffinity
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:178:13-62
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:185:13-62
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:174:13-73
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:181:13-73
 receiver#com.igexin.getuiext.service.PayloadReceiver
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:181:9-190:20
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:188:9-197:20
 	android:exported
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:183:13-37
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:190:13-37
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:182:13-71
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:189:13-71
 intent-filter#com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4+com.igexin.sdk.action.syVq0NWMgYAJFW9JeeJRw9
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:184:13-189:29
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:191:13-196:29
 action#com.igexin.sdk.action.7fjUl2Z3LH6xYy7NQK4ni4
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:186:17-87
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:193:17-87
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:186:25-84
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:193:25-84
 service#com.igexin.getuiext.service.GetuiExtService
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:191:9-193:46
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:198:9-200:46
 	android:process
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:193:13-43
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:200:13-43
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:192:13-71
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:199:13-71
 service#com.igexin.download.DownloadService
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:195:9-197:46
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:202:9-204:46
 	android:process
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:197:13-43
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:204:13-43
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:196:13-63
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:203:13-63
 receiver#com.igexin.download.DownloadReceiver
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:198:9-202:20
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:205:9-209:20
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:198:19-70
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:205:19-70
 intent-filter#android.net.conn.CONNECTIVITY_CHANGE
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:199:13-201:29
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:206:13-208:29
 provider#com.igexin.download.DownloadProvider
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:203:9-206:69
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:210:9-213:69
 	android:process
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:205:13-43
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:212:13-43
 	android:authorities
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:206:13-66
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:213:13-66
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:204:13-64
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:211:13-64
 meta-data#DATABASE
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:211:9-213:45
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:218:9-220:45
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:212:13-36
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:219:13-36
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:213:13-42
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:220:13-42
 meta-data#VERSION
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:214:9-216:33
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:221:9-223:33
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:215:13-35
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:222:13-35
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:216:13-30
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:223:13-30
 meta-data#QUERY_LOG
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:217:9-219:36
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:224:9-226:36
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:218:13-37
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:225:13-37
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:219:13-33
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:226:13-33
 meta-data#DOMAIN_PACKAGE_NAME
-ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:220:9-222:53
+ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:227:9-229:53
 	android:name
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:221:13-47
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:228:13-47
 	android:value
-		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:222:13-50
+		ADDED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml:229:13-50
 uses-sdk
 INJECTED from /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:recyclerview-v7:21.0.2] /Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/21.0.2/AndroidManifest.xml:15:5-42
