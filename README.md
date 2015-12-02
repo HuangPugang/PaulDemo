@@ -1,0 +1,29 @@
+# PaulDemo
+#这是一个个人的demo集合,功能按时间排序
+#1.亮度调节
+#2.相册or相机获取照片
+#3.volley使用
+#4.个推使用
+#5.sugar orm使用
+#6.画板使用
+#7.swiperefresh使用
+#8.广播发送
+#9.indicator
+#10.图片压缩
+#11.wifi相关操作
+#12.文件操作
+#13.动画相关
+#14.webview使用
+#15.文件上传
+#16.自定义弹性scrollview
+#17.滑动关闭activity
+#18.js和本地交互（传参调用）
+#19.dialog叠dialog
+#20.okhttp
+#21.requestLayout使用
+#22.ImageCache（郭霖版本）
+#23.上滑悬停菜单
+#24.clip（源码中）
+#25.沉浸式状态栏
+#26.recycleview
+#27.RxJava以及防AsyncTask的异步操作框架

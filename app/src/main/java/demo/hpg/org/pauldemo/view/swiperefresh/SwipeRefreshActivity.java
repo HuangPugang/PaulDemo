@@ -83,8 +83,6 @@ public class SwipeRefreshActivity extends Activity implements SwipeRefreshLayout
         refresh();
     }
 
-
-
     private void refresh() {
         mHandler.removeCallbacks(mRefreshDone);
         mHandler.postDelayed(mRefreshDone, 1000);
