@@ -6,7 +6,6 @@ import android.animation.ObjectAnimator;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +14,6 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import demo.hpg.org.pauldemo.R;
@@ -25,7 +23,7 @@ import demo.hpg.org.pauldemo.R;
  * Date 2015/3/19
  * Time 11:26
  */
-public class AnimationActivity extends Activity implements View.OnClickListener, RotateAnimation.InterpolatedTimeListener {
+public class AnimationActivity extends Activity implements View.OnClickListener, Rotate3d.InterpolatedTimeListener {
     private Button changeBG;
     private LinearLayout relativeLayout;
     private Button showTips;
@@ -90,15 +88,15 @@ public class AnimationActivity extends Activity implements View.OnClickListener,
 
     @Override
     public void onClick(View v) {
-        RotateAnimation rotateAnim = null;
+        Rotate3d rotateAnim = null;
         float cX = txtNumber.getWidth() / 2.0f;
         float cY = txtNumber.getHeight() / 2.0f;
         if (v == btnDecrease) {
             number--;
-            rotateAnim = new RotateAnimation(cX, cY, RotateAnimation.ROTATE_DECREASE);
+            rotateAnim = new Rotate3d(cX, cY, Rotate3d.ROTATE_DECREASE);
         } else if (v == btnIncrease) {
             number++;
-            rotateAnim = new RotateAnimation(cX, cY, RotateAnimation.ROTATE_INCREASE);
+            rotateAnim = new Rotate3d(cX, cY, Rotate3d.ROTATE_INCREASE);
         }
         if (rotateAnim != null) {
             rotateAnim.setInterpolatedTimeListener(this);

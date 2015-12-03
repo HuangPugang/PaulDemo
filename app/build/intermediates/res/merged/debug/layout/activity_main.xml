@@ -178,6 +178,30 @@
             android:id="@+id/pulltozoom"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+
+        <Button
+            android:text="属性动画"
+            android:id="@+id/propety"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="倒计时"
+            android:id="@+id/overtime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="音频播放"
+            android:id="@+id/media"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:text="视频播放"
+            android:id="@+id/video"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
 <!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->

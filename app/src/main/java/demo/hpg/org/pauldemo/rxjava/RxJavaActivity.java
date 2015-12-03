@@ -4,6 +4,7 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,9 +14,11 @@ import demo.hpg.org.pauldemo.base.BaseActivity;
 import rx.Observable;
 import rx.Observer;
 import rx.Subscriber;
+import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action0;
 import rx.functions.Action1;
 import rx.functions.Func1;
+import rx.schedulers.Schedulers;
 
 /**
  * Created by Paul on 15/11/26.
@@ -31,22 +34,23 @@ public class RxJavaActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rxjava);
         imageView = fvById(R.id.iv_test);
-//        ThreadExecutor.getInstance().getThreadPool().execute(new TaskThread(new CallBack() {
-//            @Override
-//            public Object runOnThread() {
-//                return "helloworld";
-//            }
-//
-//            @Override
-//            public void runOnMain(Object object) {
-//                Log.e("HPG", (String) object);
-//            }
-//
-//            @Override
-//            public void failed() {
-//
-//            }
-//        }));
+        ThreadExecutor.getInstance().getThreadPool().execute(new TaskThread(new CallBack() {
+            @Override
+            public Object runOnThread() {
+
+                return "helloworld";
+            }
+
+            @Override
+            public void runOnMain(Object object) {
+                Log.e("HPG", (String) object);
+            }
+
+            @Override
+            public void failed() {
+
+            }
+        }));
 
 
 
@@ -79,7 +83,7 @@ public class RxJavaActivity extends BaseActivity {
 
 
 
-//        //IO线程
+        //IO线程
 //        Observable.just(1,2,3,4)
 //                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
 //                .observeOn(AndroidSchedulers.mainThread())// 指定 Subscriber 的回调发生在主线程
@@ -101,6 +105,7 @@ public class RxJavaActivity extends BaseActivity {
 //        }).subscribeOn(Schedulers.io())
 //          .observeOn(AndroidSchedulers.mainThread())
 //          .subscribe(new Observer<Drawable>() {
+
 //                    @Override
 //                    public void onCompleted() {
 //                    }
@@ -172,7 +177,30 @@ public class RxJavaActivity extends BaseActivity {
 //                .subscribe(subscriber);
 
 
-        
+        Observable.create(new Observable.OnSubscribe<Integer>() {
+            @Override
+            public void call(Subscriber<? super Integer> subscriber) {
+                subscriber.onNext(1);
+                subscriber.onCompleted();
+            }
+        })
+                .subscribeOn(Schedulers.io()) // 指定 subscribe() 发生在 IO 线程
+                .observeOn(AndroidSchedulers.mainThread()) // 指定 Subscriber 的回调发生在主线程
+                .subscribe(new Observer<Integer>() {
+                    @Override
+                    public void onNext(Integer drawable) {
+                        Log.e("HPG",drawable+"=drawable");
+                    }
+
+                    @Override
+                    public void onCompleted() {
+                    }
+
+                    @Override
+                    public void onError(Throwable e) {
+                        Toast.makeText(RxJavaActivity.this, "Error!", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
     }
 

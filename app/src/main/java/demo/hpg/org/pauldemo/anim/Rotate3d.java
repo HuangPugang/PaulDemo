@@ -5,7 +5,7 @@ import android.graphics.Matrix;
 import android.view.animation.Animation;
 import android.view.animation.Transformation;
 
-public class RotateAnimation extends Animation {
+public class Rotate3d extends Animation {
     /** 值为true时可明确查看动画的旋转方向。 */
     public static final boolean DEBUG = false;
     /** 沿Y轴正方向看，数值减1时动画逆时针旋转。 */
@@ -24,7 +24,7 @@ public class RotateAnimation extends Animation {
     /** 用于监听动画进度。当值过半时需更新UI。 */
     private InterpolatedTimeListener listener;
 
-    public RotateAnimation(float cX, float cY, boolean type) {
+    public Rotate3d(float cX, float cY, boolean type) {
         centerX = cX;
         centerY = cY;
         this.type = type;

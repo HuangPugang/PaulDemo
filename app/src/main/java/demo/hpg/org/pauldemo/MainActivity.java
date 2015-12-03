@@ -5,7 +5,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import demo.hpg.org.pauldemo.anim.property.PropertyActivity;
 import demo.hpg.org.pauldemo.base.BaseActivity;
+import demo.hpg.org.pauldemo.media.autio.AudioActivity;
+import demo.hpg.org.pauldemo.media.video.VideoActivity;
+import demo.hpg.org.pauldemo.overtime.OverTimeActivity;
 import demo.hpg.org.pauldemo.rxjava.RxJavaActivity;
 import demo.hpg.org.pauldemo.view.clip.ClipActivity;
 import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
@@ -99,6 +103,13 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button pullTozoomButton;
 
+    private Button propetyButton;
+
+    private Button overtimeButton;
+
+    private Button mediaButton;
+
+    private Button videoButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -166,6 +177,14 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(swipeButton,R.id.swipe);
 
         findViewAndOnclick(pullTozoomButton,R.id.pulltozoom);
+
+        findViewAndOnclick(propetyButton,R.id.propety);
+
+        findViewAndOnclick(overtimeButton,R.id.overtime);
+
+        findViewAndOnclick(mediaButton,R.id.media);
+
+        findViewAndOnclick(videoButton,R.id.video);
     }
     @Override
     public void onClick(View v) {
@@ -267,6 +286,18 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.pulltozoom:
                 openActivity(PullToZoomActivity.class);
+                break;
+            case R.id.propety:
+                openActivity(PropertyActivity.class);
+                break;
+            case R.id.overtime:
+                openActivity(OverTimeActivity.class);
+                break;
+            case R.id.media:
+                openActivity(AudioActivity.class);
+                break;
+            case R.id.video:
+                openActivity(VideoActivity.class);
                 break;
         }
     }
