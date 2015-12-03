@@ -159,6 +159,9 @@
         <activity
             android:name="demo.hpg.org.pauldemo.media.video.VideoActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.automove.AutoMoveActivity"
+            android:label="@string/app_name" />
         <!-- 个推 -->
         <activity
             android:name="demo.hpg.org.pauldemo.getuipush.GetuiPushActivity"

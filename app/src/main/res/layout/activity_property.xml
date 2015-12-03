@@ -41,14 +41,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
     <Button
-        android:text="ScrollTo"
-        android:id="@+id/scrollto"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <Button
-        android:text="ScrollBy"
         android:id="@+id/scrollby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
+    <demo.hpg.org.pauldemo.anim.property.AutoMoveView
+        android:background="@drawable/ic_test"
+        android:id="@+id/scrollto"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
 </LinearLayout>

@@ -158,6 +158,9 @@
         <activity
             android:name=".media.video.VideoActivity"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".view.automove.AutoMoveActivity"
+            android:label="@string/app_name"></activity>
         <!--个推-->
         <activity
             android:name=".getuipush.GetuiPushActivity"

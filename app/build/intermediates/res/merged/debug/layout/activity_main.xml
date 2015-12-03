@@ -202,6 +202,11 @@
             android:id="@+id/video"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        <Button
+            android:text="可拖拽"
+            android:id="@+id/aotomove"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </ScrollView>
 <!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->

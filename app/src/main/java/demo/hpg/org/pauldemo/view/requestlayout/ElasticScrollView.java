@@ -1,6 +1,8 @@
 package demo.hpg.org.pauldemo.view.requestlayout;
 
+import android.annotation.TargetApi;
 import android.content.Context;
+import android.os.Build;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -13,6 +15,7 @@ import com.nineoldandroids.view.ViewHelper;
 /**
  * Created by Paul on 15/11/21.
  */
+@TargetApi(Build.VERSION_CODES.M)
 public class ElasticScrollView extends ScrollView implements View.OnScrollChangeListener{
     private float mDownY;
     private float mCurrentY;

@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import demo.hpg.org.pauldemo.R;
 import demo.hpg.org.pauldemo.base.BaseActivity;
+import demo.hpg.org.pauldemo.view.automove.AutoMoveView;
 
 /**
  * Created by Paul on 15/12/2.
@@ -19,7 +20,7 @@ public class PropertyActivity extends BaseActivity implements View.OnClickListen
     private Button rotateZButton;
     private Button rotateButton;
     private Button scaleButton;
-    private Button scrollToButton;
+    private AutoMoveView scrollToButton;
     private Button scrollByButton;
 
     @Override
@@ -39,7 +40,7 @@ public class PropertyActivity extends BaseActivity implements View.OnClickListen
         scaleButton = (Button) findViewById(R.id.scale);
         scaleButton.setOnClickListener(this);
 
-        scrollToButton = (Button) findViewById(R.id.scrollto);
+        scrollToButton = (AutoMoveView) findViewById(R.id.scrollto);
         scrollToButton.setOnClickListener(this);
 
         scrollByButton = (Button) findViewById(R.id.scrollby);
@@ -63,9 +64,7 @@ public class PropertyActivity extends BaseActivity implements View.OnClickListen
         } else if (viewId == R.id.scale) {
             scale();
         } else if (viewId == R.id.scrollto) {
-            scrollTo();
         } else if (viewId == R.id.scrollby) {
-            scrollBy();
         }
     }
 
@@ -120,13 +119,5 @@ public class PropertyActivity extends BaseActivity implements View.OnClickListen
         set.setDuration(400).start();
     }
 
-    //在内部
-    private void scrollTo() {
-        scrollToButton.scrollTo(100, 100);
 
-    }
-    //在内部
-    private void scrollBy() {
-        scrollToButton.scrollBy(10, 10);
-    }
 }

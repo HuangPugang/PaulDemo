@@ -11,6 +11,7 @@ import demo.hpg.org.pauldemo.media.autio.AudioActivity;
 import demo.hpg.org.pauldemo.media.video.VideoActivity;
 import demo.hpg.org.pauldemo.overtime.OverTimeActivity;
 import demo.hpg.org.pauldemo.rxjava.RxJavaActivity;
+import demo.hpg.org.pauldemo.view.automove.AutoMoveActivity;
 import demo.hpg.org.pauldemo.view.clip.ClipActivity;
 import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
 import demo.hpg.org.pauldemo.system.getmessage.MessageActivity;
@@ -110,6 +111,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button mediaButton;
 
     private Button videoButton;
+
+    private Button autoButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -185,6 +188,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(mediaButton,R.id.media);
 
         findViewAndOnclick(videoButton,R.id.video);
+
+        findViewAndOnclick(autoButton,R.id.aotomove);
     }
     @Override
     public void onClick(View v) {
@@ -298,6 +303,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.video:
                 openActivity(VideoActivity.class);
+                break;
+            case R.id.aotomove:
+                openActivity(AutoMoveActivity.class);
                 break;
         }
     }
