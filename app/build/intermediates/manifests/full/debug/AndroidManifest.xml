@@ -21,6 +21,7 @@
     <uses-permission android:name="getui.permission.GetuiService.demo.hpg.org.pauldemo" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+
     <!-- 自定义权限 -->
     <permission
         android:name="getui.permission.GetuiService.demo.hpg.org.pauldemo"
@@ -136,6 +137,30 @@
             android:label="@string/app_name" />
         <activity
             android:name="demo.hpg.org.pauldemo.rxjava.RxJavaActivity"
+            android:label="@string/app_name"
+            android:theme="@style/BottomInTheme" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.swipelayout.SwipeLayoutActivity"
+            android:label="@string/app_name"
+            android:theme="@style/BottomInTheme" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.pulltozoom.PullToZoomActivity"
+            android:label="@string/app_name"
+            android:theme="@style/BottomInTheme" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.anim.property.PropertyActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.overtime.OverTimeActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.media.autio.AudioActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.media.video.VideoActivity"
+            android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.view.automove.AutoMoveActivity"
             android:label="@string/app_name" />
         <!-- 个推 -->
         <activity

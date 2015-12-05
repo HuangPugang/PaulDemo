@@ -3,11 +3,15 @@ package demo.hpg.org.pauldemo;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.Button;
 
+import demo.hpg.org.pauldemo.anim.property.PropertyActivity;
 import demo.hpg.org.pauldemo.base.BaseActivity;
+import demo.hpg.org.pauldemo.media.autio.AudioActivity;
+import demo.hpg.org.pauldemo.media.video.VideoActivity;
+import demo.hpg.org.pauldemo.overtime.OverTimeActivity;
 import demo.hpg.org.pauldemo.rxjava.RxJavaActivity;
+import demo.hpg.org.pauldemo.view.automove.AutoMoveActivity;
 import demo.hpg.org.pauldemo.view.clip.ClipActivity;
 import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
 import demo.hpg.org.pauldemo.system.getmessage.MessageActivity;
@@ -24,11 +28,13 @@ import demo.hpg.org.pauldemo.system.lightcontrol.LightControlActivity;
 import demo.hpg.org.pauldemo.view.moveview.MoveViewActivity;
 import demo.hpg.org.pauldemo.network.okhttp.OkHttpActivity;
 import demo.hpg.org.pauldemo.view.nostatus.NoStatusActivity;
+import demo.hpg.org.pauldemo.view.pulltozoom.PullToZoomActivity;
 import demo.hpg.org.pauldemo.view.recycleview.RecycleActivity;
 import demo.hpg.org.pauldemo.view.requestlayout.RequestLayoutActivity;
 import demo.hpg.org.pauldemo.view.slidingfinish.SlidingActivity;
 import demo.hpg.org.pauldemo.sugarorm.SugarActivity;
 import demo.hpg.org.pauldemo.view.stickscroll.StickyScrollActivity;
+import demo.hpg.org.pauldemo.view.swipelayout.SwipeLayoutActivity;
 import demo.hpg.org.pauldemo.view.swiperefresh.SwipeRefreshActivity;
 import demo.hpg.org.pauldemo.view.tanxingscrollview.ElasticScrollViewActivity;
 import demo.hpg.org.pauldemo.network.upload.UploadActivity;
@@ -94,6 +100,19 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private Button rxjavaButton;
 
+    private Button swipeButton;
+
+    private Button pullTozoomButton;
+
+    private Button propetyButton;
+
+    private Button overtimeButton;
+
+    private Button mediaButton;
+
+    private Button videoButton;
+
+    private Button autoButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,6 +176,20 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(recycleButton,R.id.recycle);
 
         findViewAndOnclick(rxjavaButton,R.id.rxjava);
+
+        findViewAndOnclick(swipeButton,R.id.swipe);
+
+        findViewAndOnclick(pullTozoomButton,R.id.pulltozoom);
+
+        findViewAndOnclick(propetyButton,R.id.propety);
+
+        findViewAndOnclick(overtimeButton,R.id.overtime);
+
+        findViewAndOnclick(mediaButton,R.id.media);
+
+        findViewAndOnclick(videoButton,R.id.video);
+
+        findViewAndOnclick(autoButton,R.id.aotomove);
     }
     @Override
     public void onClick(View v) {
@@ -252,6 +285,27 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.rxjava:
                 openActivity(RxJavaActivity.class);
+                break;
+            case R.id.swipe:
+                openActivity(SwipeLayoutActivity.class);
+                break;
+            case R.id.pulltozoom:
+                openActivity(PullToZoomActivity.class);
+                break;
+            case R.id.propety:
+                openActivity(PropertyActivity.class);
+                break;
+            case R.id.overtime:
+                openActivity(OverTimeActivity.class);
+                break;
+            case R.id.media:
+                openActivity(AudioActivity.class);
+                break;
+            case R.id.video:
+                openActivity(VideoActivity.class);
+                break;
+            case R.id.aotomove:
+                openActivity(AutoMoveActivity.class);
                 break;
         }
     }

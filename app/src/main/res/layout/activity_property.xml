@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:text="移动动画"
+        android:id="@+id/trans"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <Button
+        android:text="X轴旋转动画"
+        android:id="@+id/rotateX"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="Y轴旋转动画"
+
+        android:id="@+id/rotateY"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:text="Z轴旋转动画"
+        android:visibility="gone"
+        android:id="@+id/rotateZ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="旋转动画"
+        android:id="@+id/rotate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:text="放大动画"
+        android:id="@+id/scale"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <Button
+        android:id="@+id/scrollby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <demo.hpg.org.pauldemo.anim.property.AutoMoveView
+        android:background="@drawable/ic_test"
+        android:id="@+id/scrollto"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+
+</LinearLayout>
