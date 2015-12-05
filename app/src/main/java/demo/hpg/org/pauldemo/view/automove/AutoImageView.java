@@ -1,5 +1,7 @@
 package demo.hpg.org.pauldemo.view.automove;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -37,13 +39,17 @@ public class AutoImageView extends ImageView {
         int action = ev.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                mLastY = mDownY = (int) ev.getRawY();
-                mLastX = mDownX = (int) ev.getRawX();
+                mLastY = (int) ev.getRawY();
+                mLastX = (int) ev.getRawX();
                 Log.e("HPG", "getRawX=" + ev.getRawX() + "\ngetRawY=" + ev.getRawY() + "\ngetTop=" + this.getTop() + "\ngetRight=" + this.getRight() + "\ngetBottom=" + getBottom() + "\ngetLeft=" + getLeft());
                 break;
             case MotionEvent.ACTION_UP:
-                mDownY = 0;
-                mDownX = 0;
+                AnimatorSet set = new AnimatorSet();
+                set.playTogether(
+                        ObjectAnimator.ofFloat(this, "translationY", mLastY, 0),
+                        ObjectAnimator.ofFloat(this, "translationX", mLastX, 0)
+                );
+                set.setDuration(400).start();
                 break;
             case MotionEvent.ACTION_MOVE:
                 mCurrentX = (int) ev.getRawX();
