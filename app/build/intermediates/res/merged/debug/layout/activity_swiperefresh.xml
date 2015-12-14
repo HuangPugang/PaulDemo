@@ -9,4 +9,4 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:id="@+id/content"/>
-</android.support.v4.widget.SwipeRefreshLayout><!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_swiperefresh.xml -->
+</android.support.v4.widget.SwipeRefreshLayout><!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_swiperefresh.xml -->

@@ -7,13 +7,15 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#30469b" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="#009959"
-        android:clipToPadding="true"
-        android:fitsSystemWindows="true"
         android:text="你好，请问你有男朋友吗" />
 
 

@@ -1,212 +1,250 @@
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:fitsSystemWindows="true"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <LinearLayout
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00a1ff" />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-    <Button
-        android:id="@+id/light_control"
-        android:text="亮度调节"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/getphoto"
-        android:text="相册获取图片"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <Button
-        android:id="@+id/volley"
-        android:text="Volley使用"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/getui"
-        android:text="个推消息推送"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/light_control"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="亮度调节" />
 
-    <Button
-        android:id="@+id/sugar"
-        android:text="sugar orm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/getphoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="相册获取图片" />
 
-    <Button
-        android:id="@+id/myscrollview"
-        android:text="自定义scrooview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/volley"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Volley使用" />
 
-    <Button
-        android:id="@+id/swiperefresh"
-        android:text="swiperefresh"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/getui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="个推消息推送" />
 
-    <Button
-        android:id="@+id/sendBroadcast"
-        android:text="发送广播"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />Ò
+            <Button
+                android:id="@+id/sugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sugar orm" />
 
-    <Button
-        android:id="@+id/indicator_"
-        android:text="indicator"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/myscrollview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="自定义scrooview" />
 
-    <Button
-        android:text="图片压缩"
-        android:id="@+id/image_compress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/swiperefresh"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="swiperefresh" />
 
-    <Button
-        android:text="WIFI操作"
-        android:id="@+id/wifi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/sendBroadcast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="发送广播" />Ò
 
-    <Button
-        android:text="WIFI_AP"
-        android:id="@+id/wifi_ap"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/indicator_"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="indicator" />
 
-        <Button
-            android:text="File"
-            android:id="@+id/socket"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/image_compress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="图片压缩" />
 
-        <Button
-            android:text="Activity动画"
-            android:id="@+id/anim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="webview"
-            android:id="@+id/webview"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/wifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WIFI操作" />
 
-        <Button
-            android:text="上传"
-            android:id="@+id/upload"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="弹性scrollview"
-            android:id="@+id/elastic"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="滑动关闭"
-            android:id="@+id/slidingfinish"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="js调用"
-            android:id="@+id/js"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/wifi_ap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="WIFI_AP" />
 
-        <Button
-            android:text="dialog叠dialog"
-            android:id="@+id/dialog"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="Okhttp"
-            android:id="@+id/okhttp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="RequestLayout"
-            android:id="@+id/request"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="ImageCache"
-            android:id="@+id/imagecache"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="StickScroll"
-            android:id="@+id/stick"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/socket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="File" />
 
-        <Button
-            android:text="Clip"
-            android:id="@+id/clip"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="NoStatus"
-            android:id="@+id/nostatus"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="RecycleView"
-            android:id="@+id/recycle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="RxJava"
-            android:id="@+id/rxjava"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="SWIPE"
-            android:id="@+id/swipe"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="PullToZoom"
-            android:id="@+id/pulltozoom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Activity动画" />
 
-        <Button
-            android:text="属性动画"
-            android:id="@+id/propety"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/webview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="webview" />
 
-        <Button
-            android:text="倒计时"
-            android:id="@+id/overtime"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/upload"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="上传" />
 
-        <Button
-            android:text="音频播放"
-            android:id="@+id/media"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/elastic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="弹性scrollview" />
 
-        <Button
-            android:text="视频播放"
-            android:id="@+id/video"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-        <Button
-            android:text="可拖拽"
-            android:id="@+id/aotomove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
-</ScrollView>
-<!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->
+            <Button
+                android:id="@+id/slidingfinish"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="滑动关闭" />
+
+            <Button
+                android:id="@+id/js"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="js调用" />
+
+            <Button
+                android:id="@+id/dialog"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dialog叠dialog" />
+
+            <Button
+                android:id="@+id/okhttp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Okhttp" />
+
+            <Button
+                android:id="@+id/request"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RequestLayout" />
+
+            <Button
+                android:id="@+id/imagecache"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ImageCache" />
+
+            <Button
+                android:id="@+id/stick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="StickScroll" />
+
+            <Button
+                android:id="@+id/clip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clip" />
+
+            <Button
+                android:id="@+id/nostatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NoStatus" />
+
+            <Button
+                android:id="@+id/recycle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RecycleView" />
+
+            <Button
+                android:id="@+id/rxjava"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RxJava" />
+
+            <Button
+                android:id="@+id/swipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SWIPE" />
+
+            <Button
+                android:id="@+id/pulltozoom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PullToZoom" />
+
+            <Button
+                android:id="@+id/propety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="属性动画" />
+
+            <Button
+                android:id="@+id/overtime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="倒计时" />
+
+            <Button
+                android:id="@+id/media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="音频播放" />
+
+            <Button
+                android:id="@+id/video"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="视频播放" />
+
+            <Button
+                android:id="@+id/aotomove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="可拖拽" />
+
+            <Button
+                android:id="@+id/optimize"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="内存优化" />
+
+            <Button
+                android:id="@+id/behavior"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Behavior" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</LinearLayout><!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->

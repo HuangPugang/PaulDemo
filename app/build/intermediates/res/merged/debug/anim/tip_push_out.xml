@@ -15,4 +15,4 @@
         android:interpolator="@android:anim/accelerate_interpolator"
         android:toYDelta="-100%" />
 
-</set><!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/anim/tip_push_out.xml -->
+</set><!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/anim/tip_push_out.xml -->

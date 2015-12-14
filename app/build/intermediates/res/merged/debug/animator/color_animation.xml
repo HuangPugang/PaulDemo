@@ -6,4 +6,4 @@
     android:valueTo="#000099"
     android:repeatCount="infinite"
     android:repeatMode="reverse"
-    android:valueType="intType"></objectAnimator><!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/animator/color_animation.xml -->
+    android:valueType="intType"></objectAnimator><!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/animator/color_animation.xml -->

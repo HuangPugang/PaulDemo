@@ -4,4 +4,4 @@
         android:duration="400"
         android:fromYDelta="-20%p"
         android:toYDelta="0" />
-</set><!-- From: file:/Users/Paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/anim/top_in_tip.xml -->
+</set><!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/anim/top_in_tip.xml -->

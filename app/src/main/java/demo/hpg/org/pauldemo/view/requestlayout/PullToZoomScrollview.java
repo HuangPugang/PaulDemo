@@ -18,7 +18,7 @@ import android.widget.AbsListView.OnScrollListener;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 
-public class PullToZoomScrollView extends ScrollView implements OnScrollListener{
+public class PullToZoomScrollview extends ScrollView implements OnScrollListener{
     private  boolean isonce;//加载该View的布局时是否是第一次加载，是第一次就让其实现OnMeasure里的代码
 
     private LinearLayout mParentView;//布局的父布局，ScrollView内部只能有一个根ViewGroup，就是此View
@@ -59,7 +59,7 @@ public class PullToZoomScrollView extends ScrollView implements OnScrollListener
      * @param context
      * @param attrs
      */
-    public PullToZoomScrollView(Context context, AttributeSet attrs) {
+    public PullToZoomScrollview(Context context, AttributeSet attrs) {
         super(context, attrs);
         this.setOverScrollMode(View.OVER_SCROLL_NEVER);
         WindowManager wm= (WindowManager) getContext().getSystemService(Context.WINDOW_SERVICE);
