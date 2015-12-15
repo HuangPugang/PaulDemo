@@ -358,7 +358,7 @@ public final class R {
 		public static final int collapseActionView = 0x7f0c0033;
 		public static final int decor_content_parent = 0x7f0c005a;
 		public static final int default_activity_button = 0x7f0c0042;
-		public static final int dialog = 0x7f0c0091;
+		public static final int dialog = 0x7f0c0092;
 		public static final int disableHome = 0x7f0c000e;
 		public static final int edit_query = 0x7f0c005e;
 		public static final int end = 0x7f0c0020;
@@ -426,7 +426,7 @@ public final class R {
 		public static final int abc_screen_toolbar = 0x7f030015;
 		public static final int abc_search_dropdown_item_icons_2line = 0x7f030016;
 		public static final int abc_search_view = 0x7f030017;
-		public static final int support_simple_spinner_dropdown_item = 0x7f030068;
+		public static final int support_simple_spinner_dropdown_item = 0x7f03006a;
 	}
 	public static final class string {
 		public static final int abc_action_bar_home_description = 0x7f060000;

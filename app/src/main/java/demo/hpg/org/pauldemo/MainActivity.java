@@ -20,6 +20,7 @@ import demo.hpg.org.pauldemo.media.video.VideoActivity;
 import demo.hpg.org.pauldemo.optimize.OptimizeActivity;
 import demo.hpg.org.pauldemo.overtime.OverTimeActivity;
 import demo.hpg.org.pauldemo.rxjava.RxJavaActivity;
+import demo.hpg.org.pauldemo.simplepullloadmore.LoadmoreActivity;
 import demo.hpg.org.pauldemo.view.automove.AutoMoveActivity;
 import demo.hpg.org.pauldemo.view.clip.ClipActivity;
 import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
@@ -127,6 +128,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button optimizeButton;
 
     private Button behaviorButton;
+
+    private Button loadmoreButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -220,6 +223,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(optimizeButton,R.id.optimize);
 
         findViewAndOnclick(behaviorButton,R.id.behavior);
+
+        findViewAndOnclick(loadmoreButton,R.id.loadmore);
     }
     @Override
     public void onClick(View v) {
@@ -342,6 +347,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.behavior:
                 openActivity(BehaviorActivity.class);
+                break;
+            case R.id.loadmore:
+                openActivity(LoadmoreActivity.class);
                 break;
         }
     }
