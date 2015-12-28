@@ -1,16 +1,26 @@
 package demo.hpg.org.pauldemo;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
+import android.telephony.TelephonyManager;
+import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import demo.hpg.org.pauldemo.anim.property.PropertyActivity;
 import demo.hpg.org.pauldemo.base.BaseActivity;
+import demo.hpg.org.pauldemo.behavior.BehaviorActivity;
 import demo.hpg.org.pauldemo.media.autio.AudioActivity;
 import demo.hpg.org.pauldemo.media.video.VideoActivity;
+import demo.hpg.org.pauldemo.optimize.OptimizeActivity;
 import demo.hpg.org.pauldemo.overtime.OverTimeActivity;
 import demo.hpg.org.pauldemo.rxjava.RxJavaActivity;
+import demo.hpg.org.pauldemo.simplepullloadmore.LoadmoreActivity;
 import demo.hpg.org.pauldemo.view.automove.AutoMoveActivity;
 import demo.hpg.org.pauldemo.view.clip.ClipActivity;
 import demo.hpg.org.pauldemo.view.dialog.DialogActivity;
@@ -49,6 +59,7 @@ import demo.hpg.org.pauldemo.system.wifimanager.WifiManagerActivity;
  */
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
+    private Toolbar toolbar;
     private Button lightControlButton;//亮度调节
 
     private Button getPhotoButton;//获取图片
@@ -113,14 +124,32 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button videoButton;
 
     private Button autoButton;
+
+    private Button optimizeButton;
+
+    private Button behaviorButton;
+
+    private Button loadmoreButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initView();
+        initToolbar();
+        showInfo();
     }
 
+    private void initToolbar(){
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setLogo(R.drawable.ic_launcher);
+        toolbar.setTitle("PaulDemo");
+        toolbar.setSubtitle("demo合集，方便查阅");
+        toolbar.setNavigationIcon(R.drawable.close);
+        setSupportActionBar(toolbar);
+    }
     private void initView() {
+
         findViewAndOnclick(lightControlButton, R.id.light_control);
 
         findViewAndOnclick(getPhotoButton, R.id.getphoto);
@@ -190,6 +219,12 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(videoButton,R.id.video);
 
         findViewAndOnclick(autoButton,R.id.aotomove);
+
+        findViewAndOnclick(optimizeButton,R.id.optimize);
+
+        findViewAndOnclick(behaviorButton,R.id.behavior);
+
+        findViewAndOnclick(loadmoreButton,R.id.loadmore);
     }
     @Override
     public void onClick(View v) {
@@ -307,6 +342,15 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.aotomove:
                 openActivity(AutoMoveActivity.class);
                 break;
+            case R.id.optimize:
+                openActivity(OptimizeActivity.class);
+                break;
+            case R.id.behavior:
+                openActivity(BehaviorActivity.class);
+                break;
+            case R.id.loadmore:
+                openActivity(LoadmoreActivity.class);
+                break;
         }
     }
 
@@ -315,4 +359,63 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button.setOnClickListener(this);
     }
 
+    private void showInfo(){
+        TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nDeviceId(IMEI) = " + tm.getDeviceId());
+        sb.append("\nDeviceSoftwareVersion = " + tm.getDeviceSoftwareVersion());
+        sb.append("\nLine1Number = " + tm.getLine1Number());
+        sb.append("\nNetworkCountryIso = " + tm.getNetworkCountryIso());
+        sb.append("\nNetworkOperator = " + tm.getNetworkOperator());
+        sb.append("\nNetworkOperatorName = " + tm.getNetworkOperatorName());
+        sb.append("\nNetworkType = " + tm.getNetworkType());
+        sb.append("\nPhoneType = " + tm.getPhoneType());
+        sb.append("\nSimCountryIso = " + tm.getSimCountryIso());
+        sb.append("\nSimOperator = " + tm.getSimOperator());
+        sb.append("\nSimOperatorName = " + tm.getSimOperatorName());
+        sb.append("\nSimSerialNumber = " + tm.getSimSerialNumber());
+        sb.append("\nSimState = " + tm.getSimState());
+        sb.append("\nSubscriberId(IMSI) = " + tm.getSubscriberId());
+        sb.append("\nVoiceMailNumber = " + tm.getVoiceMailNumber());
+        Log.e("info", sb.toString());
+        Toast.makeText(this,sb.toString(),Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+
+        //noinspection SimplifiableIfStatement
+//        if (id == R.id.action_settings||id == R.id.action_edit || id == R.id.action_share) {
+//            return true;
+//        }
+        switch (item.getItemId()) {
+            case android.R.id.home:
+
+                finish();
+                break;
+            case R.id.action_settings:
+                Toast.makeText(MainActivity.this, "action_setting", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_share:
+                Toast.makeText(MainActivity.this, "action_location", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_edit:
+                Toast.makeText(MainActivity.this, "action_search", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+                break;
+        }
+        return true;
+    }
 }

@@ -1,6 +1,7 @@
 package demo.hpg.org.pauldemo.view.nostatus;
 
 import android.app.Activity;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
@@ -19,5 +20,6 @@ public class NoStatusActivity extends Activity {
         setContentView(R.layout.activity_no_status);
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_STATUS);
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_TRANSLUCENT_NAVIGATION);
+
     }
 }
