@@ -24,6 +24,7 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.AsyncTask;
 import android.os.Environment;
+import android.util.Log;
 import android.util.LruCache;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -115,7 +116,7 @@ public class PhotoWallAdapter extends ArrayAdapter<String> {
 
 	/**
 	 * 将一张图片存储到LruCache中。
-	 * 
+	 *
 	 * @param key
 	 *            LruCache的键，这里传入图片的URL地址。
 	 * @param bitmap
@@ -129,7 +130,7 @@ public class PhotoWallAdapter extends ArrayAdapter<String> {
 
 	/**
 	 * 从LruCache中获取一张图片，如果不存在就返回null。
-	 * 
+	 *
 	 * @param key
 	 *            LruCache的键，这里传入图片的URL地址。
 	 * @return 对应传入键的Bitmap对象，或者null。
@@ -144,12 +145,15 @@ public class PhotoWallAdapter extends ArrayAdapter<String> {
 	 */
 	public void loadBitmaps(ImageView imageView, String imageUrl) {
 		try {
-			Bitmap bitmap = getBitmapFromMemoryCache(imageUrl);
+//			Bitmap bitmap = getBitmapFromMemoryCache(imageUrl);
+			Bitmap bitmap = null;
 			if (bitmap == null) {
+				Log.e("HPG","memory==null");
 				BitmapWorkerTask task = new BitmapWorkerTask();
 				taskCollection.add(task);
 				task.execute(imageUrl);
 			} else {
+				Log.e("HPG","memory!=null");
 				if (imageView != null && bitmap != null) {
 					imageView.setImageBitmap(bitmap);
 				}
@@ -273,6 +277,7 @@ public class PhotoWallAdapter extends ArrayAdapter<String> {
 				// 查找key对应的缓存
 				snapShot = mDiskLruCache.get(key);
 				if (snapShot == null) {
+					Log.e("HPG","snapShot==null");
 					// 如果没有找到对应的缓存，则准备从网络上请求数据，并写入缓存
 					DiskLruCache.Editor editor = mDiskLruCache.edit(key);
 					if (editor != null) {
@@ -327,7 +332,6 @@ public class PhotoWallAdapter extends ArrayAdapter<String> {
 		/**
 		 * 建立HTTP请求，并获取Bitmap对象。
 		 * 
-		 * @param imageUrl
 		 *            图片的URL地址
 		 * @return 解析后的Bitmap对象
 		 */

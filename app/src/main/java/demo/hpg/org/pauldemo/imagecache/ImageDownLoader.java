@@ -27,7 +27,7 @@ public class ImageDownLoader {
      */
     private ExecutorService mImageThreadPool = null;
 
-
+    private DiskCache mDiskCache;
     public ImageDownLoader(Context context){
         //获取系统分配给每个应用程序的最大内存，每个应用系统分配32M
         int maxMemory = (int) Runtime.getRuntime().maxMemory();
@@ -42,7 +42,7 @@ public class ImageDownLoader {
             }
 
         };
-
+        mDiskCache = new DiskCache(context);
         fileUtils = new FileUtils(context);
     }
 
@@ -55,7 +55,6 @@ public class ImageDownLoader {
         if(mImageThreadPool == null){
             synchronized(ExecutorService.class){
                 if(mImageThreadPool == null){
-                    //为了下载图片更加的流畅，我们用了2个线程来下载图片
                     mImageThreadPool = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors());
                 }
             }
@@ -93,9 +92,6 @@ public class ImageDownLoader {
      * @return
      */
     public Bitmap downloadImage(final String url, final onImageLoaderListener listener){
-        //替换Url中非字母和非数字的字符，这里比较重要，因为我们用Url作为文件名，比如我们的Url
-        //是Http://xiaanming/abc.jpg;用这个作为图片名称，系统会认为xiaanming为一个目录，
-        //我们没有创建此目录保存文件就会报错
         final String subUrl = url.replaceAll("[^\\w]", "");
         Bitmap bitmap = showCacheBitmap(subUrl);
         if(bitmap != null){

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.ViewTreeObserver;
 import android.widget.GridView;
+import android.widget.ImageView;
 
 import demo.hpg.org.pauldemo.R;
 
@@ -26,11 +27,14 @@ public class ImageCacheActivity extends Activity {
 
 	private int mImageThumbSize;
 	private int mImageThumbSpacing;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_imagecache);
+//		imageView = (ImageView) findViewById(R.id.image);
+//		DiskCache diskCache = new DiskCache(this);
+//		diskCache.download(imageView);
+
 		mImageThumbSize = getResources().getDimensionPixelSize(
 				R.dimen.image_thumbnail_size);
 		mImageThumbSpacing = getResources().getDimensionPixelSize(
@@ -41,7 +45,7 @@ public class ImageCacheActivity extends Activity {
 		mPhotoWall.setAdapter(mAdapter);
 		mPhotoWall.getViewTreeObserver().addOnGlobalLayoutListener(
 				new ViewTreeObserver.OnGlobalLayoutListener() {
-					
+
 					@Override
 					public void onGlobalLayout() {
 						final int numColumns = (int) Math.floor(mPhotoWall
