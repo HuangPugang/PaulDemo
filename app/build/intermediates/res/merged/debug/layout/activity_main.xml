@@ -249,6 +249,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="加载更多" />
+            <Button
+                android:id="@+id/https"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="https" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout><!-- From: file:/Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->

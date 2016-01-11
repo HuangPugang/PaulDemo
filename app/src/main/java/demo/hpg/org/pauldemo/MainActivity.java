@@ -15,6 +15,7 @@ import android.widget.Toast;
 import demo.hpg.org.pauldemo.anim.property.PropertyActivity;
 import demo.hpg.org.pauldemo.base.BaseActivity;
 import demo.hpg.org.pauldemo.behavior.BehaviorActivity;
+import demo.hpg.org.pauldemo.https.HttpsActivity;
 import demo.hpg.org.pauldemo.media.autio.AudioActivity;
 import demo.hpg.org.pauldemo.media.video.VideoActivity;
 import demo.hpg.org.pauldemo.optimize.OptimizeActivity;
@@ -130,6 +131,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button behaviorButton;
 
     private Button loadmoreButton;
+    private Button httpsButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -225,6 +227,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(behaviorButton,R.id.behavior);
 
         findViewAndOnclick(loadmoreButton,R.id.loadmore);
+        findViewAndOnclick(httpsButton,R.id.https);
     }
     @Override
     public void onClick(View v) {
@@ -350,6 +353,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 break;
             case R.id.loadmore:
                 openActivity(LoadmoreActivity.class);
+                break;
+            case R.id.https:
+                openActivity(HttpsActivity.class);
                 break;
         }
     }

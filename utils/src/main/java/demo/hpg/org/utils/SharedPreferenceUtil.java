@@ -1,8 +1,16 @@
 package demo.hpg.org.utils;
 
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.util.Base64;
+
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 /**
  * 共享数据存取类
@@ -113,4 +121,98 @@ public class SharedPreferenceUtil {
     public static boolean getBoolean(String key,boolean defVal){
         return pref.getBoolean(key,defVal);
     }
+
+    /**
+     * 保存对象缓存
+     *
+     * @param context
+     * @param o
+     */
+    public static void saveObject(String key, Context context, Object o) {
+        ByteArrayOutputStream baos = null;
+        ObjectOutputStream oos = null;
+        try {
+            if (o == null)
+                return;
+            baos = new ByteArrayOutputStream();
+            oos = new ObjectOutputStream(baos);
+            oos.writeObject(o);
+            SharedPreferences sharedPreferences = context.getSharedPreferences(
+                    CONFIG_FILE_NAME, Activity.MODE_PRIVATE);
+            String newsListBase64 = new String(Base64.encode(
+                    baos.toByteArray(), 1));
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            // 将编码后的字符串写到base64.xml文件中
+            editor.putString(key, newsListBase64);
+            editor.commit();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            if (oos != null) {
+                try {
+                    oos.close();
+                    oos = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (baos != null) {
+                try {
+                    baos.close();
+                    baos = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    /**
+     * 获得对象缓存
+     *
+     * @param context
+     * @return
+     */
+    public static Object getObject(String key, Context context) {
+        Object object = null;
+        ByteArrayInputStream bais = null;
+        ObjectInputStream ois = null;
+        try {
+
+            long TIMESTART = System.currentTimeMillis();
+
+            SharedPreferences sharedPreferences = context.getSharedPreferences(
+                    CONFIG_FILE_NAME, Activity.MODE_PRIVATE);
+            String newsListBase64 = sharedPreferences.getString(key, null);
+
+            if (newsListBase64 == null) {
+                return null;
+            }
+            // 对Base64格式的字符串进行解码
+            byte[] base64Bytes = Base64.decode(newsListBase64.getBytes(), 1);
+            bais = new ByteArrayInputStream(base64Bytes);
+            ois = new ObjectInputStream(bais);
+            object = ois.readObject();
+        } catch (Exception e) {
+        } finally {
+            if (ois != null) {
+                try {
+                    ois.close();
+                    ois = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+            if (bais != null) {
+                try {
+                    bais.close();
+                    bais = null;
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+        return object;
+    }
+
 }
