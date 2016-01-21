@@ -6,7 +6,12 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Environment;
+import android.os.Handler;
+import android.os.Message;
+import android.util.Log;
 import android.widget.ImageView;
+
+import com.android.volley.Cache;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
@@ -29,7 +34,8 @@ import libcore.io.DiskLruCache;
  */
 public class DiskCache {
     private DiskLruCache mDiskLruCache = null;
-    private int MAX_DISK_CACHE_SIZE =  10 * 1024 * 1024;
+    private final int MAX_DISK_CACHE_SIZE =  10 * 1024 * 1024;
+    private ImageView mImageView;
     public DiskCache(Context context){
         try {
             File cacheDir = getDiskCacheDir(context, "bitmap");
@@ -50,7 +56,9 @@ public class DiskCache {
         } else {
             cachePath = context.getCacheDir().getPath();
         }
-        return new File(cachePath + File.separator + uniqueName);
+        String path = cachePath + File.separator + uniqueName;
+        Log.e("HPG",path);
+        return new File(path);
     }
 
 
@@ -72,6 +80,10 @@ public class DiskCache {
             final URL url = new URL(urlString);
             urlConnection = (HttpURLConnection) url.openConnection();
             in = new BufferedInputStream(urlConnection.getInputStream(), 8 * 1024);
+            Bitmap bitmap = BitmapFactory.decodeStream(in);
+            Message message = new Message();
+            message.obj = bitmap;
+            handler.sendMessage(message);
             out = new BufferedOutputStream(outputStream, 8 * 1024);
             int b;
             while ((b = in.read()) != -1) {
@@ -98,64 +110,71 @@ public class DiskCache {
         return false;
     }
 
-    public String hashKeyForDisk(String key) {
-        String cacheKey;
-        try {
-            final MessageDigest mDigest = MessageDigest.getInstance("MD5");
-            mDigest.update(key.getBytes());
-            cacheKey = bytesToHexString(mDigest.digest());
-        } catch (NoSuchAlgorithmException e) {
-            cacheKey = String.valueOf(key.hashCode());
-        }
-        return cacheKey;
-    }
 
-    private String bytesToHexString(byte[] bytes) {
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < bytes.length; i++) {
-            String hex = Integer.toHexString(0xFF & bytes[i]);
-            if (hex.length() == 1) {
-                sb.append('0');
-            }
-            sb.append(hex);
-        }
-        return sb.toString();
-    }
-
-    public void download(){
+    public void download(ImageView imageView){
+        this.mImageView = imageView;
         new Thread(new Runnable() {
             @Override
             public void run() {
-                try {
-                    String imageUrl = "http://img.my.csdn.net/uploads/201309/01/1378037235_7476.jpg";
-                    String key = hashKeyForDisk(imageUrl);
-                    DiskLruCache.Editor editor = mDiskLruCache.edit(key);
-                    if (editor != null) {
-                        OutputStream outputStream = editor.newOutputStream(0);
-                        if (downloadUrlToStream(imageUrl, outputStream)) {
-                            editor.commit();
-                        } else {
-                            editor.abort();
+                String imageUrl = "http://img.my.csdn.net/uploads/201309/01/1378037235_7476.jpg";
+                String mykey = CacheUtils.hashKeyForDisk(imageUrl);
+                if (getCache(mykey) != null) {
+                    Log.e("HPG","hit");
+                    mImageView.setImageBitmap(getCache(mykey));
+                } else {
+                    Log.e("HPG","getCache() is NULL");
+                    try {
+                        DiskLruCache.Editor editor = mDiskLruCache.edit(mykey);
+                        if (editor != null) {
+                            OutputStream outputStream = editor.newOutputStream(0);
+                            if (downloadUrlToStream(imageUrl, outputStream)) {
+                                editor.commit();
+                            } else {
+                                editor.abort();
+                            }
                         }
+                        mDiskLruCache.flush();
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                    mDiskLruCache.flush();
-                } catch (IOException e) {
-                    e.printStackTrace();
                 }
             }
         }).start();
     }
+    private Handler handler = new Handler(){
+        @Override
+        public void handleMessage(Message msg) {
+            super.handleMessage(msg);
+            Bitmap b = (Bitmap) msg.obj;
+            mImageView.setImageBitmap(b);
+        }
+    };
+    //
+    public void saveCache(){
 
-    public void getCache(ImageView imageView){
+    }
+
+    //从磁盘获得缓存
+    public Bitmap getCache(String key){
         try {
-            String imageUrl = "http://img.my.csdn.net/uploads/201309/01/1378037235_7476.jpg";
-            String key = hashKeyForDisk(imageUrl);
             DiskLruCache.Snapshot snapShot = mDiskLruCache.get(key);
             if (snapShot != null) {
                 InputStream is = snapShot.getInputStream(0);
                 Bitmap bitmap = BitmapFactory.decodeStream(is);
-                imageView.setImageBitmap(bitmap);
+                return bitmap;
             }
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+        return null;
+    }
+
+    public void removeCache(){
+        try {
+            String imageUrl = "http://img.my.csdn.net/uploads/201309/01/1378037235_7476.jpg";
+            String key = CacheUtils.hashKeyForDisk(imageUrl);
+            mDiskLruCache.remove(key);
         } catch (IOException e) {
             e.printStackTrace();
         }

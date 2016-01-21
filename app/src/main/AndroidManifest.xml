@@ -169,6 +169,12 @@
         <activity
             android:name=".simplepullloadmore.LoadmoreActivity"
             android:label="@string/app_name"></activity>
+        <activity
+            android:name=".list.ListTestActivity"
+            android:label="@string/app_name"></activity>
+        <activity
+            android:name=".https.HttpsActivity"
+            android:label="@string/app_name"></activity>
         <!--个推-->
         <activity
             android:name=".getuipush.GetuiPushActivity"
