@@ -134,6 +134,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button loadmoreButton;
     private Button httpsButton;
     private Button listButton;
+    private Button retrofitButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -177,6 +177,9 @@
         <activity
             android:name="demo.hpg.org.pauldemo.https.HttpsActivity"
             android:label="@string/app_name" />
+        <activity
+            android:name="demo.hpg.org.pauldemo.retrofit.RetrofitActivity"
+            android:label="@string/app_name" />
         <!-- 个推 -->
         <activity
             android:name="demo.hpg.org.pauldemo.getuipush.GetuiPushActivity"

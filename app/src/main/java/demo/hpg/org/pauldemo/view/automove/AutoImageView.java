@@ -39,17 +39,18 @@ public class AutoImageView extends ImageView {
         int action = ev.getAction();
         switch (action) {
             case MotionEvent.ACTION_DOWN:
-                mLastY = (int) ev.getRawY();
-                mLastX = (int) ev.getRawX();
+
+                mDownY = mLastY = (int) ev.getRawY();
+                mDownX =  mLastX = (int) ev.getRawX();
                 Log.e("HPG", "getRawX=" + ev.getRawX() + "\ngetRawY=" + ev.getRawY() + "\ngetTop=" + this.getTop() + "\ngetRight=" + this.getRight() + "\ngetBottom=" + getBottom() + "\ngetLeft=" + getLeft());
                 break;
             case MotionEvent.ACTION_UP:
-                AnimatorSet set = new AnimatorSet();
-                set.playTogether(
-                        ObjectAnimator.ofFloat(this, "translationY", mLastY, 0),
-                        ObjectAnimator.ofFloat(this, "translationX", mLastX, 0)
-                );
-                set.setDuration(400).start();
+//                AnimatorSet set = new AnimatorSet();
+//                set.playTogether(
+//                        ObjectAnimator.ofFloat(this, "translationY", ev.getRawY(),mDownY),
+//                        ObjectAnimator.ofFloat(this, "translationX", ev.getRawX(), mDownX)
+//                );
+//                set.setDuration(400).start();
                 break;
             case MotionEvent.ACTION_MOVE:
                 mCurrentX = (int) ev.getRawX();
