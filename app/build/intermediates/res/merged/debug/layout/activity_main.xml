@@ -268,6 +268,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="retrofit" />
+
+            <Button
+                android:id="@+id/recycleview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="recycleView" />
         </LinearLayout>
     </android.support.v4.widget.NestedScrollView>
 </LinearLayout><!-- From: file:/Users/Paul/Documents/workspace/workspace_studio/PaulDemo/app/src/main/res/layout/activity_main.xml -->

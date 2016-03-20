@@ -21,6 +21,7 @@ import demo.hpg.org.pauldemo.media.autio.AudioActivity;
 import demo.hpg.org.pauldemo.media.video.VideoActivity;
 import demo.hpg.org.pauldemo.optimize.OptimizeActivity;
 import demo.hpg.org.pauldemo.overtime.OverTimeActivity;
+import demo.hpg.org.pauldemo.recycleview.HomeActivity;
 import demo.hpg.org.pauldemo.rxjava.RxJavaActivity;
 import demo.hpg.org.pauldemo.simplepullloadmore.LoadmoreActivity;
 import demo.hpg.org.pauldemo.view.automove.AutoMoveActivity;
@@ -135,6 +136,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private Button httpsButton;
     private Button listButton;
     private Button retrofitButton;
+    private Button recycviewleButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -232,6 +234,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         findViewAndOnclick(loadmoreButton,R.id.loadmore);
         findViewAndOnclick(httpsButton,R.id.https);
         findViewAndOnclick(listButton,R.id.list);
+
+        findViewAndOnclick(recycviewleButton,R.id.recycleview);
     }
     @Override
     public void onClick(View v) {
@@ -362,6 +366,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 openActivity(HttpsActivity.class);
             case R.id.list:
                 ListTestActivity.launch(MainActivity.this);
+                break;
+            case R.id.recycleview:
+                openActivity(HomeActivity.class);
                 break;
         }
     }
