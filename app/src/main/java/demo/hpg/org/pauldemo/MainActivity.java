@@ -1,8 +1,14 @@
 package demo.hpg.org.pauldemo;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.telephony.TelephonyManager;
 import android.util.Log;
@@ -11,6 +17,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
 
 import demo.hpg.org.pauldemo.anim.property.PropertyActivity;
 import demo.hpg.org.pauldemo.base.BaseActivity;
@@ -143,7 +150,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         setContentView(R.layout.activity_main);
         initView();
         initToolbar();
-        showInfo();
+//        showInfo();
     }
 
     private void initToolbar(){
@@ -377,7 +384,51 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         button = fvById(resourceId);
         button.setOnClickListener(this);
     }
+    private static final int READ_CONTACTS_PERMISSIONS_REQUEST = 1;
 
+//    public void getPermissionToReadUserContacts() {
+//
+//
+//        int checkSelfPermission = ContextCompat.checkSelfPermission(this, Manifest.permission.READ_PHONE_STATE);
+//
+//        if(checkSelfPermission != PackageManager.PERMISSION_GRANTED){
+//            if (ActivityCompat.shouldShowRequestPermissionRationale(this,
+//                    Manifest.permission.READ_PHONE_STATE)) {
+//                new AlertDialog.Builder(MainActivity.this)
+//                        .setMessage("为了能够提高申请提额的，请允许访问电话本权限")
+//                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                ActivityCompat.requestPermissions(MainActivity.this, new String[]{Manifest.permission.READ_PHONE_STATE}, READ_CONTACTS_PERMISSIONS_REQUEST);
+//                            }
+//                        })
+//                        .create()
+//                        .show();
+//            }else{
+//                ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.READ_PHONE_STATE}, READ_CONTACTS_PERMISSIONS_REQUEST);
+//            }
+//        }else{
+////            getCameraData();
+//        }
+//    }
+//
+//    // Callback with the request from calling requestPermissions(...)
+//    @Override
+//    public void onRequestPermissionsResult(int requestCode,
+//                                           @NonNull String permissions[],
+//                                           @NonNull int[] grantResults) {
+//        // Make sure it's our original READ_CONTACTS request
+//        if (requestCode == READ_CONTACTS_PERMISSIONS_REQUEST) {
+//            if (grantResults.length == 1 &&
+//                    grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+//                Toast.makeText(this, "Read Contacts permission granted", Toast.LENGTH_SHORT).show();
+//            } else {
+//                Toast.makeText(this, "Read Contacts permission denied", Toast.LENGTH_SHORT).show();
+//            }
+//        } else {
+//            super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+//        }
+//    }
     private void showInfo(){
         TelephonyManager tm = (TelephonyManager) getSystemService(Context.TELEPHONY_SERVICE);
         StringBuilder sb = new StringBuilder();

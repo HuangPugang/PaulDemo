@@ -4,6 +4,7 @@ import android.app.Application;
 
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
+import com.karumi.dexter.Dexter;
 
 import demo.hpg.org.sugar.orm.SugarContext;
 
@@ -23,6 +24,7 @@ public class MyApplication extends Application {
 
         //初始化sugarorm
         SugarContext.init(this);
+        Dexter.initialize(this);
     }
 
     /**

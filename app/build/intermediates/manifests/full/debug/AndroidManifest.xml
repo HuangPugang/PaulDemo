@@ -302,6 +302,11 @@
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="demo.hpg.org.pauldemo" />
+
+        <activity
+            android:name="com.karumi.dexter.DexterActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.Transparent" />
     </application>
 
 </manifest>
