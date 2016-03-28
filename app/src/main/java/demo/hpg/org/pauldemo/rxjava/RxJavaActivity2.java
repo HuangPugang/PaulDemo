@@ -7,14 +7,12 @@ import android.widget.Toast;
 
 import demo.hpg.org.pauldemo.R;
 import demo.hpg.org.pauldemo.base.BaseActivity;
-import rx.Observable;
 import rx.Subscriber;
-import rx.android.schedulers.AndroidSchedulers;
 
 /**
  * Created by Paul on 15/11/26.
  */
-public class RxJavaActivity extends BaseActivity {
+public class RxJavaActivity2 extends BaseActivity {
 
 
     private String[] names = {"huang", "lin", "zhu"};
@@ -28,17 +26,8 @@ public class RxJavaActivity extends BaseActivity {
         setContentView(R.layout.activity_rxjava);
         imageView = fvById(R.id.iv_test);
         mTvTest = fvById(R.id.tv_test);
-        // 观察事件发生
-        Observable.OnSubscribe mObservableAction = new Observable.OnSubscribe<String>() {
-            @Override public void call(Subscriber<? super String> subscriber) {
-                subscriber.onNext("hello test"); // 发送事件
-                subscriber.onCompleted(); // 完成事件
-            }
-        };
-        Observable<String> observable = Observable.create(mObservableAction);
-        observable.observeOn(AndroidSchedulers.mainThread());
-        observable.subscribe(setTextSubscriber);
-        observable.subscribe(toastSubscriber);
+
+
     }
 
     Subscriber<String> setTextSubscriber = new Subscriber<String>() {
@@ -71,7 +60,7 @@ public class RxJavaActivity extends BaseActivity {
 
         @Override
         public void onNext(String s) {
-            Toast.makeText(RxJavaActivity.this,s,Toast.LENGTH_SHORT).show();
+            Toast.makeText(RxJavaActivity2.this,s,Toast.LENGTH_SHORT).show();
         }
     };
 
