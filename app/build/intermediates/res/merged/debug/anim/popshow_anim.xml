@@ -10,4 +10,3 @@
         android:fromAlpha="0.0"
         android:toAlpha="1.0" />
 </set>
-<!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/anim/popshow_anim.xml -->

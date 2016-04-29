@@ -19,4 +19,4 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
     </Button>
-</LinearLayout> <!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_socket.xml -->
+</LinearLayout> 

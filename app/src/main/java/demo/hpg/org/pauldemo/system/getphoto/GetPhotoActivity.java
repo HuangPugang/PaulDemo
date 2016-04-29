@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
@@ -13,7 +14,10 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import java.io.BufferedOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import demo.hpg.org.pauldemo.R;
 
@@ -70,7 +74,7 @@ public class GetPhotoActivity extends Activity {
             // File(Environment.getExternalStorageDirectory().toString() +
             // AsynImageLoader.CAMERA_TEMP);
             // Uri uri = Uri.fromFile(out);
-            Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "temp.jpg"));
+            Uri uri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "temp4.jpg"));
             intent.putExtra(MediaStore.EXTRA_OUTPUT, uri);
             startActivityForResult(intent, IMAGE_FROM_CAMERA);
         } catch (Exception e) {
@@ -96,7 +100,7 @@ public class GetPhotoActivity extends Activity {
 //			String pathString = Environment.getExternalStorageDirectory() + "/temp.jpg";
 //			setPicBitmap(pathString);
 //			doImageUpdate();
-                Uri tempPicUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "temp.jpg"));
+                Uri tempPicUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory(), "temp4.jpg"));
                 cropImage(tempPicUri);
                 break;
             case IMAGE_FROM_PHOTOS:
@@ -132,15 +136,34 @@ public class GetPhotoActivity extends Activity {
         }
     }
 
+    /**
+     * 保存bitmap到文件
+     * @param bitmap
+     */
+    public static void saveBitmapToFile(Bitmap bitmap) {
+        File file = new File(Environment.getExternalStorageDirectory() + "/temp5.jpg");//将要保存图片的路径
+        try {
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(file));
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, bos);
+            bos.flush();
+            bos.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
     private void cropImage(Uri tempPicUri) {
         Intent intent = new Intent();
         intent.setAction("com.android.camera.action.CROP");
         intent.setDataAndType(tempPicUri, "image/*");
+        File file = new File(Environment.getExternalStorageDirectory()+"/temp4.jpg");
+        Bitmap bitmap = BitmapFactory.decodeFile(Environment.getExternalStorageDirectory()+"/temp4.jpg");
+        int wi = bitmap.getWidth();
+        int he = bitmap.getHeight();
         intent.putExtra("crop", "true");
-        intent.putExtra("aspectX", 1);
-        intent.putExtra("aspectY", 1);
+//        intent.putExtra("aspectX", 1);
+//        intent.putExtra("aspectY", 1);
         intent.putExtra("outputX", 300);
-        intent.putExtra("outputY", 300);
+        intent.putExtra("outputY", 300*wi/he);
         intent.putExtra("return-data", true);
         startActivityForResult(intent, CROP_IMAGE);
     }

@@ -49,4 +49,4 @@
         android:id="@+id/wifi_list"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"></ListView>
-</LinearLayout><!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/layout/activity_wifi_manager.xml -->
+</LinearLayout>

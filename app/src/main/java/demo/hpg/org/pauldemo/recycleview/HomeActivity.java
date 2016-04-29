@@ -78,17 +78,9 @@ public class HomeActivity extends ActionBarActivity {
         mAdapter.setOnItemClickLitener(new HomeAdapter.OnItemClickLitener() {
             @Override
             public void onItemClick(final View view, int position) {
-                final View view1 = mRecyclerView.getChildAt(position);
+                final View view1 = mRecyclerView.getLayoutManager().findViewByPosition(position);
+                showPopUp(view1, view1.getWidth());
 
-                view1.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        view1.getLocationOnScreen(location);
-                        showPopUp(view1,view1.getWidth());
-                        Toast.makeText(HomeActivity.this, view1.getHeight()+" "+view1.getWidth()+" "+location[0]+" "+location[1],
-                                Toast.LENGTH_SHORT).show();
-                    }
-                });
 
             }
 

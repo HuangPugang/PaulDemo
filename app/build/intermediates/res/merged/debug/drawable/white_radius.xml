@@ -3,4 +3,4 @@
     android:shape="oval">
     <solid
         android:color="@android:color/white"/>
-</shape><!-- From: file:/Users/paul/Documents/dev/workspace/studio/PaulDemo/app/src/main/res/drawable/white_radius.xml -->
+</shape>
